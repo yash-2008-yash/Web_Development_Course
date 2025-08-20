@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DEMO PROJECT</title>
+<style>
+    body {
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+    img {
+        max-width: 300px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+    <h1>Enter Your Name</h1>
+    <input type="text" id="nameInput" placeholder="Your name here">
+    <button onclick="showPrank()">Enter</button>
+
+    <script>
+        function showPrank() {
+            let name = document.getElementById("nameInput").value;
+            if(name.trim() === "") {
+                alert("Type a name first, bro!");
+                return;
+            }
+            document.body.innerHTML = `
+                <h1>Fuck you, ${name}🤣</h1>
+                <img src="leonardo.jpg" alt="Special Image">
+            `;
+        }
+    </script>
+</body>
+</html>
