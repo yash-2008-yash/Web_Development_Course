@@ -1,0 +1,2 @@
+Install latest version of Visual Studio Code, the best code editor.
+While installing, don't forget to select the 'open with code' option.
