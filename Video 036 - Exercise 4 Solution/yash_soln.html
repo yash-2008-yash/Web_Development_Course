@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navigation Bar</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+</style>
+<style>
+  :root {
+    --background_theme: rgb(152, 171, 255);
+    --nav_border: rgb(25, 25, 183);
+    --buttons_color: blue;
+  }
+
+  * {
+    justify-content: center;
+    text-align: center;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-family: "Poppins", sans-serif;
+    /* font-weight: ; */
+  }
+
+  body {
+    background-color: var(--background_theme);
+  }
+
+  .navbar {
+    border: 2px solid var(--nav_border);
+    height: 70px;
+    display: flex;
+    border-radius: 50px;
+  }
+
+  .home {
+    padding: 10px 28px 10px 25px;
+    margin: 15px;
+    background-color: var(--buttons_color);
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+
+  .about {
+    padding: 10px 28px 10px 25px;
+    margin: 15px;
+    background-color: var(--buttons_color);
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+
+  .contact {
+    padding: 10px 28px 10px 25px;
+    margin: 15px;
+    background-color: var(--buttons_color);
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+
+  .home:hover {
+    background-color: rgb(203, 203, 203);
+    color: var(--buttons_color);
+  }
+
+  .about:hover {
+    background-color: rgba(203, 203, 203);
+    color: var(--buttons_color);
+  }
+
+  .contact:hover {
+    background-color: rgba(203, 203, 203);
+    color: var(--buttons_color);
+  }
+
+  footer {
+    margin: 34px;
+    padding: 0;
+  }
+</style>
+
+<body>
+  <div class="navbar">
+    <span class="home">HOME</span>
+    <span class="about">ABOUT</span>
+    <span class="contact">CONTACT</span>
+  </div>
+  <footer>Copyright &copy <b>YASHWANTH M</b></footer>
+</body>
+
+</html>
