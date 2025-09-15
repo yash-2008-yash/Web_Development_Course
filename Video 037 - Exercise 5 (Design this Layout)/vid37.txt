@@ -1,0 +1,7 @@
+Exercise 5 (Design this layout)
+
+Create a website with a nav bar at the top.
+Website should have two sections, close to each other.
+Website should have a rectangular box after sections, with text.
+A logo should be there at the bottom-right corner. It should always stay there.
+A footer section should also be there at the end of the website.
