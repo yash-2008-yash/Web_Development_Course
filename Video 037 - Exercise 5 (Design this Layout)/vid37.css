@@ -81,3 +81,12 @@ footer {
     color:rgb(79, 0, 90);
     font-size: 50px;
 }
+
+img{
+    border:2px solid black;
+    border-radius: 50%;
+    object-fit: cover;
+    position:fixed;
+    top:530px;
+    right:30px;
+}
