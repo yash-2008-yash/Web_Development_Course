@@ -1,0 +1,4 @@
+To make the website's download functionality work, download the .exe file and store it as 'ue_english.exe'
+NOTE: Store the .exe excatly as mentioned.
+
+I tried to store the .exe file, but GitHub isn't allowing it to keep in my repo because it's 108MB in size and GitHub's limit of one file is 100MB.

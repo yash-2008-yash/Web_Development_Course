@@ -1,0 +1,6 @@
+To edit our HTML code, we need a good code editor.
+And that is 'Visual Studio Code.'
+
+NOTE: While installing, don't forget to mark the 'Open With Code' option.
+
+Install 'Live Server' extension in VS Code, which helps to open the website in one click.

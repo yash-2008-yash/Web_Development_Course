@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Perspective</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box {
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(135deg, #ff512f, #dd2476);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .without_perspective .box {
+        transform: rotateY(45deg);
+    }
+
+    .with_perspective {
+        perspective: 1000px;
+        /* parent gives perspective to its child */
+    }
+
+    .with_perspective .box {
+        transform: rotateY(45deg);
+    }
+</style>
+
+<body>
+    <div class="without_perspective">
+        <div class="box">Without perspective</div>
+    </div>
+    <div class="with_perspective">
+        <div class="box">With perspective</div>
+    </div>
+
+</body>
+
+</html>
