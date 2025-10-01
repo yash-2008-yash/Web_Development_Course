@@ -1,0 +1,4 @@
+You have a blue big box in the screen.
+Inside that blue box, there is a red ball.
+You should make the box bounce and go towards the right side.
+Use CSS Animation or CSS Transition to solve this exercise.

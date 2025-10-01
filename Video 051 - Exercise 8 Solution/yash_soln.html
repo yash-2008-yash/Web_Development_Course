@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 8</title>
+</head>
+<style>
+    .blue_box {
+        height: 100vh;
+        width: 100vw;
+        background-color: blue;
+        position: relative;
+    }
+
+    .red_ball {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+        border-radius: 70px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        animation: xaxis 0.8s linear 2s infinite;
+    }
+
+    @keyframes xaxis {
+        0% {
+            transform: translateX(0) translateY(0);
+        }
+
+        10% {
+            transform: translateX(20px) translateY(-20px);
+        }
+
+        20% {
+            transform: translateX(40px) translateY(-40px);
+        }
+
+        30% {
+            transform: translateX(60px) translateY(-60px);
+        }
+
+        40% {
+            transform: translateX(80px) translateY(-80px);
+        }
+
+        50% {
+            transform: translateX(90px) translateY(-99px);
+        }
+
+        60% {
+            transform: translateX(120px) translateY(-80px);
+        }
+
+        70% {
+            transform: translateX(140px) translateY(-60px);
+        }
+
+        80% {
+            transform: translateX(160px) translateY(-40px);
+        }
+
+        90% {
+            transform: translateX(180px) translateY(-20px);
+        }
+
+        100% {
+            transform: translateX(200px) translateY(0);
+        }
+    }
+</style>
+
+<body>
+    <div class="blue_box">
+        <div class="red_ball"></div>
+    </div>
+</body>
+
+</html>
