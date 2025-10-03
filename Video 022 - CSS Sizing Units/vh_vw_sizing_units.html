@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vh & vw sizing Units</title>
+</head>
+<style>
+    .box {
+        background-color: blueviolet;
+
+        height: 30vh;
+        /* 30vh (viewport height) means the height will cover 30% of the screen */
+
+        width: 70vw;
+        /* 70vw (viewport width) means the width will cover 70% of the screen */
+
+        /*
+        This is useful to make the website responsive.
+        When we change device's aspect ratio, then this vh and vw will adapt the size.
+        */
+    }
+</style>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

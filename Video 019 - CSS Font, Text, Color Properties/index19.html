@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fonts</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    /* This gives us the access to use "Poppins" font in our HTML file */
+    /* We can import different fonts from fonts.google.com*/
+
+    body {
+        background-color: blueviolet;
+        color: white;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 50px;
+        /*We can also do this to increase the size, instead of only relying on h1 to h6 tags*/
+        border: 1px solid white;
+        margin: 25px 350px 0 350px;
+    }
+
+    .poppins_font {
+        font-family: "Poppins", sans-serif;
+    }
+</style>
+
+<body>
+    <h1>CSS Font Styling</h1>
+    <br>
+    <h3>I am the content with default font.</h3>
+    <h3 class="poppins_font">I am the content with 'Poppins' font.</h3>
+</body>
+
+</html>

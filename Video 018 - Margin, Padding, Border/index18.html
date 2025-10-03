@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin, Padding, Border</title>
+</head>
+<style>
+    * {
+        text-align: center;
+    }
+
+    body {
+        background-color: darkgreen;
+        color: whitesmoke;
+    }
+
+    h1 {
+        border: 2px solid beige;
+
+        /* Margin is the outer space of the element */
+        /* Margin Syntax : top right bottom left */
+        margin: 0 400px 0 400px;
+
+        /* Padding is the space between element and it's border */
+        /* Padding Syntax : top right bottom left */
+        padding: 10px 5px 10px 5px;
+    }
+
+    h3 {
+        border: 2px solid beige;
+    }
+
+    .with_padding_and_margin {
+        padding: 25px 50px 30px 50px;
+        margin: 0 300px 0 300px;
+    }
+</style>
+
+<body>
+    <h1>Margin, Padding, Border</h1>
+
+    <h3>
+        <u>WITHOUT PADDING AND MARGIN</u>
+        <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi fuga maiores, officia veritatis deserunt eum
+        facilis omnis vitae molestiae temporibus vero dolorum laborum qui totam ipsum libero possimus aspernatur
+        expedita architecto? Optio, molestias earum facilis officia et hic magnam delectus nulla, alias reprehenderit
+        quis quidem dolores ex dolore, est praesentium?
+    </h3>
+    <h3 class="with_padding_and_margin">
+        <u>WITH PADDING AND MARGIN</u>
+        <br>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa nisi expedita animi repellendus. Voluptatibus
+        quasi, sunt pariatur ad beatae nisi nulla vitae expedita culpa aut optio reprehenderit dolore amet a ducimus
+        deserunt aliquid rem facere adipisci voluptas tenetur vel. Voluptatum at ipsam reiciendis tempora ad
+        necessitatibus quas blanditiis. Porro, pariatur.
+    </h3>
+</body>
+
+</html>

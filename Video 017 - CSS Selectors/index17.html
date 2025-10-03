@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+</head>
+<style>
+    /* UNIVERSAL SELECTOR
+    This selects everything on the page */
+    * {
+        text-align: center;
+    }
+
+    /* ID SELECTOR 
+    This selects the element which has the id value as "text" */
+    #text {
+        color: crimson;
+    }
+
+    /* CLASS SELECTOR
+    This selects every element which has the class value as "red" */
+    .red {
+        color: red;
+        background-color: black;
+    }
+
+    /* DESCENDANT SELECTOR 
+    This selects the p inside the .orange */
+    .orange p {
+        color: orange;
+        background-color: black;
+    }
+
+    /* CHILD SELECTOR
+    This selects the specific child of that block of code
+
+    first-child selects the first child
+    last-child selects the last child */
+    .childs :first-child {
+        color: white;
+        background-color: red;
+    }
+
+    /* N-TH CHILD SELECTOR
+    This specifically selects the child by the number
+    We can also select from the last with nth-last-child */
+    .childs :nth-child(2),
+    .childs :nth-child(3) {
+        color: white;
+        background-color: red;
+    }
+
+    /* Style given in this element will appear when we hover on this element */
+    a:hover {
+        background-color: black;
+    }
+
+    /* If the given link in anchor tag is already visited, then this style will be applied */
+    a:visited {
+        color: green;
+    }
+</style>
+
+<body>
+    <h1>CSS Selectors</h1>
+
+    <span id="text">
+        CSS Selectors are used to select specific elements to style them.
+    </span>
+
+    <div class="orange">
+        <p>I am the orange text with black background.</p>
+    </div>
+
+    <div class="red">
+        <p>I am the red text with black background.</p>
+    </div>
+
+    <div class="childs">
+        <p>First Child</p>
+        <p>Second Child</p>
+        <p>Third Child</p>
+    </div>
+
+    <a href="https://www.youtube.com">
+        <b>CLICK ME TO OPEN YOUTUBE</b>
+    </a>
+</body>
+
+</html>

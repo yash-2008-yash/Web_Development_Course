@@ -1,3 +1,0 @@
-Exercise 1 - Create a video player which has 6 videos and 6 audios.
-
-Use only HTML to do this.

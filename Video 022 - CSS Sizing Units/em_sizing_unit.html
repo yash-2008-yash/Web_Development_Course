@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em (relative to parent)</title>
+</head>
+<style>
+    .container {
+        font-size: 30px;
+        /* Both parent and child will have 30px size now */
+    }
+
+    p {
+        font-size: 2em;
+        /*
+        em is relative to the parent size.
+        p inherits it's parent's size (30px).
+        Now, I gave the p font-size as 2em, so it's size will be 2x the inherited size.
+        In this case, it inherited 30px, so it's 2x size is 60px.
+        So, now the p will be in 60px in size.
+        */
+    }
+</style>
+
+<body>
+    <div class="container">
+        THE PARENT TEXT
+        <p>THE CHILD TEXT</p>
+    </div>
+</body>
+
+</html>

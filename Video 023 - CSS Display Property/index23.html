@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+</head>
+<style>
+    body {
+        text-align: center;
+    }
+
+    p {
+        background-color: blueviolet;
+        color: white;
+    }
+
+    span {
+        background-color: red;
+        color: white;
+    }
+
+    .block_to_inline {
+        display: inline;
+        /* p is a block element, but now it's an inline element */
+    }
+
+    .inline_to_block {
+        display: block;
+        /* span is an inline element, but now it's a block element */
+    }
+
+    .inline_and_block {
+        background-color: black;
+        color: white;
+        display: inline-block;
+        width: 500px;
+        /* this is both inline and block, so we can control height and width */
+    }
+
+    h1 {
+        color: black;
+        /* display: none; */
+        /* visibility: hidden; */
+    }
+</style>
+
+<body>
+    <p>I am a block element</p>
+    <span>I am an inline element</span>
+
+    <h1>With 'display' property, we can change block to inline and inline to block.</h1>
+
+    <p class="block_to_inline">I am a block element</p>
+    <br><br>
+    <span class="inline_to_block">I am an inline element</span>
+
+    <p class="inline_and_block">
+        I am both block and inline
+    </p>
+
+    <!-- 
+    ONE MORE IMPORTANT TOPIC
+    
+    If I display: none; the h1 tag, it'll disappear and the space it occupied will also disappear.
+    But if you want an element to be disappeared and it's occupied space should be still there,
+    then you should use visibility: hidden; instead of display: none;
+    -->
+
+</body>
+
+</html>

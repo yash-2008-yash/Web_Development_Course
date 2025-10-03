@@ -1,0 +1,4 @@
+EXERCISE 1
+
+Create a website with 6 videos and 6 audios, and make the website as a media player with controls.
+You should only use HTML to do this exercise.

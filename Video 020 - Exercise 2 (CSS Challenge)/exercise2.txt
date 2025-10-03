@@ -1,0 +1,8 @@
+EXERCISE 2
+
+Write a CSS code to :
+
+i. change the first p to background color as yellow and font color as red.
+ii. change the remaining two p to background color as blue and font color as white.
+
+NOTE: You shouldn't touch the HTML file. Just use CSS to solve the exercise.

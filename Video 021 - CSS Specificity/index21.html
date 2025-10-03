@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity in CSS</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+
+    .red {
+        color: red;
+    }
+
+    .blue {
+        color: blue;
+    }
+
+    .green {
+        color: green;
+    }
+
+    /* Specificity in CSS 
+    
+    Inline style > ID style > Class or Atrribute style > Element style > Universal style 
+    THIS IS THE PRIORITY OF THE DIFFERENT STYLES.
+
+    !important has more specificity than inline style.
+    It is used when we have to overwrite the inline style.
+    */
+</style>
+
+<body>
+    <h1 class="red blue green">Specificity in CSS</h1>
+    <!-- Here, the h1 is in green color because its the latest style. -->
+</body>
+
+</html>

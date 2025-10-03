@@ -1,0 +1,12 @@
+#kingslayer {
+    color: gold;
+    /* Selects the element which has id="kingslayer" */
+}
+
+.stark {
+    color: gray;
+    /* Selects the element which has class="stark" */
+}
+
+/* Some elements can have same classes, but id is a unique value.
+Only one element can have that id value. */
