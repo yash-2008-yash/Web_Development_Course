@@ -1,0 +1,9 @@
+EXERCISE 5
+
+Create a website skeleton with :
+
+i. a sticky navbar
+ii. a green container in the content section, with two containers inside it
+iii. a textbox after the above containers
+iv. an empty footer section
+v. a fixed logo at the bottom-right corner

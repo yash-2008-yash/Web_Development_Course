@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+</head>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* Selects the first line and styles it. */
+    .firstline :first-line {
+        background-color: blueviolet;
+        color: white;
+    }
+
+    /* 
+        Universal selector can be used for a specific block also.
+        If there is a div with class="container",
+        then .container * {CSS styles} will style all the items inside container.
+    */
+
+    /* Selects the odd childs and styles them */
+    .paras :nth-child(odd) {
+        background-color: black;
+        color: red;
+    }
+
+    /* Selects the even childs and styles them */
+    .paras :nth-child(even) {
+        background-color: black;
+        color: orange;
+    }
+
+    /* Creates 'before' element and styles it */
+    .content::before {
+        content: "I AM THE 'BEFORE' CONTENT";
+        color: blue;
+    }
+
+    /* Creates 'after' element and styles it */
+    .content::after {
+        content: "I AM THE 'AFTER' CONTENT";
+        color: red;
+    }
+
+    /* Whenever the respective item is selected, this styles will apply */
+    .boxes::selection {
+        background-color: blueviolet;
+        color: white;
+    }
+
+    /* Styles the first letter and styles it */
+    .firstletter::first-letter {
+        color: peru;
+        font-size: 80px;
+    }
+</style>
+
+<body>
+    <div class="firstline">
+        <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae modi ipsam rerum quibusdam vero,
+            eligendi culpa dignissimos. Consectetur omnis ullam sit magnam voluptatem ratione vel totam aut fugiat ad
+            soluta dignissimos sequi deserunt, recusandae consequuntur ducimus vitae laborum qui modi. Ratione, quidem
+            delectus ullam corporis temporibus iure consequuntur adipisci nihil.</h1>
+    </div>
+
+    <br>
+
+    <div class="paras">
+        <div class="para1">Paragraph 1</div>
+        <div class="para2">Paragraph 2</div>
+        <div class="para3">Paragraph 3</div>
+        <div class="para4">Paragraph 4</div>
+        <div class="para5">Paragraph 5</div>
+    </div>
+
+    <br>
+
+    <div class="content">
+        <h3>I AM THE REAL CONTENT</h3>
+    </div>
+
+    <br>
+
+    <div class="firstletter">
+        <h1>The End</h1>
+    </div>
+
+</body>
+
+</html>

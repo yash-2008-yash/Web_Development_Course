@@ -1,0 +1,5 @@
+EXERCISE 4
+
+Build a navigation bar with a specific color theme.
+Use CSS variables to store the colors.
+We should be able to change the color theme easily.

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+</head>
+<style>
+    body {
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    :root {
+        --primary_color: red;
+        --secondary_color: orange;
+        --font_color: white;
+    }
+
+    h1 {
+        background-color: var(--primary_color);
+        color: var(--font_color);
+    }
+
+    h2 {
+        background-color: var(--secondary_color);
+        color: var(--font_color);
+    }
+
+    h3 {
+        background-color: var(--secondary_color);
+        color: var(--font_color);
+    }
+
+    h4 {
+        background-color: var(--secondary_color);
+        color: var(--font_color);
+    }
+
+    h5 {
+        background-color: var(--secondary_color);
+        color: var(--font_color);
+    }
+
+    h6 {
+        background-color: var(--secondary_color);
+        color: var(--font_color);
+    }
+</style>
+
+<body>
+    <h1>CSS Variables</h1>
+    <h2>Paragraph 1</h2>
+    <h3>Paragraph 2</h3>
+    <h4>Paragraph 3</h4>
+    <h5>Paragraph 4</h5>
+    <h6>Paragraph 5</h6>
+
+    All the paragraph's color can be changed at once, because of CSS variables.
+</body>
+
+</html>

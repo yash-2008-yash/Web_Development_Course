@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries in CSS</title>
+</head>
+<style>
+    body {
+        background-color: blueviolet;
+        color: white;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .boxes {
+        height: 100px;
+        width: 100px;
+        background-color: rgb(192, 124, 255);
+        border: 2px solid rgb(192, 124, 255);
+    }
+
+    /* This style will apply when a device has resolution less than 580px */
+    @media only screen and (max-width:580px) {
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+</style>
+
+<body>
+    <!-- Media Query Syntax
+     
+    @media only/not mediatype and (expressions){
+        CSS Code
+    }
+        
+    Media Queries are used to make websites responsive.
+    All devices don't have the same resolution, so websites will look different.
+    We can design what the website will look in different devices.
+    
+    In this website, normally the boxes will be in row.
+    But if you change the device width less than 580px, the boxes will be in column.
+    
+    -->
+
+    <div class="container">
+        <div class="boxes">1</div>
+        <div class="boxes">2</div>
+        <div class="boxes">3</div>
+        <div class="boxes">4</div>
+        <div class="boxes">5</div>
+    </div>
+</body>
+
+</html>
