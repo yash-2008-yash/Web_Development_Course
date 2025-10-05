@@ -1,0 +1,8 @@
+EXERCISE 7
+
+Create a clone page exactly as this website.
+The download button should have the download functionality.
+When the user clicks on the download button, the file should be downloaded.
+Use CSS grid to design the layout.
+
+Website: https://www.ultraedit.com/downloads

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+</head>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* Just like Instagram filters, we can add filters to image using CSS */
+
+    .image1 {
+        filter: blur(5px);
+    }
+
+    .image2 {
+        filter: brightness(250%);
+    }
+
+    .image3 {
+        filter: contrast(4);
+    }
+
+    .image4 {
+        filter: grayscale(1);
+    }
+
+    .image5 {
+        filter: invert(1);
+    }
+
+    .image6 {
+        filter: opacity(0.5);
+    }
+
+    .image7 {
+        filter: saturate(300%);
+    }
+
+    .image8 {
+        filter: sepia(100);
+    }
+</style>
+
+<body>
+    <img src="leonardo.jpg" class="image1" height="300px">
+    <h1>blur() blurs the image</h1>
+    <br>
+    <img src="leonardo.jpg" class="image2" height="300px">
+    <h1>brightness() modifies the brightness of the image</h1>
+    <br>
+    <img src="leonardo.jpg" class="image3" height="300px">
+    <h1>contrast() modifies the contrast of the image</h1>
+    <br>
+    <img src="leonardo.jpg" class="image4" height="300px">
+    <h1>grayscale() changes image to black and white</h1>
+    <br>
+    <img src="leonardo.jpg" class="image5" height="300px">
+    <h1>invert() inverts the image into negative</h1>
+    <br>
+    <img src="leonardo.jpg" class="image6" height="300px">
+    <h1>opacity() modifies the transparency of the image</h1>
+    <br>
+    <img src="leonardo.jpg" class="image7" height="300px">
+    <h1>saturate() modifies the saturation of the image</h1>
+    <br>
+    <img src="leonardo.jpg" class="image8" height="300px">
+    <h1>sepia() converts the image into sepia</h1>
+</body>
+
+</html>

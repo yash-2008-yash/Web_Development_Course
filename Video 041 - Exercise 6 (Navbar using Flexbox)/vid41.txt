@@ -1,3 +1,0 @@
-In this exercise, we have to create a navbar using CSS Flexbox.
-We have to design the navbar exactly as in this website.
-Website: https://www.ultraedit.com

@@ -7,10 +7,17 @@
     <title>CSS Animations</title>
 </head>
 <style>
+    * {
+        margin: 0;
+        margin-top: 30px;
+        padding: 0;
+    }
+
     .container {
         height: 75vh;
-        width: 90vw;
+        width: 100vw;
         background-color: blueviolet;
+
     }
 
     .box {
@@ -20,20 +27,17 @@
         color: white;
         display: flex;
         justify-content: center;
-        text-align: center;
         align-items: center;
-        animation: YashKaAnimation 8s infinite 3s;
+        animation: YashKaAnimation 7s infinite 1s;
     }
 
     @keyframes YashKaAnimation {
-        from {
-            background-color: red;
-        }
+        from {}
 
         to {
             background-color: yellow;
             color: black;
-            /* transform: translateX(750px); */
+            transform: translateX(800px);
         }
     }
 </style>

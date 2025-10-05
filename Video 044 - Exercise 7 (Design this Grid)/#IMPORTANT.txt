@@ -1,4 +1,7 @@
-To make the website's download functionality work, download the .exe file and store it as 'ue_english.exe'
-NOTE: Store the .exe excatly as mentioned.
+To make the website's download functionality work, we should keep the .exe file in the same folder.
+I tried to store the .exe file and push it to the GitHub repo,
+but GitHub's file push size limit is 100MB, and the .exe file is 108MB.
 
-I tried to store the .exe file, but GitHub isn't allowing it to keep in my repo because it's 108MB in size and GitHub's limit of one file is 100MB.
+So, if you want the download functionality to work,
+install the .exe file from the website and name it as 'ue_english.exe',
+and store it inside ths folder.

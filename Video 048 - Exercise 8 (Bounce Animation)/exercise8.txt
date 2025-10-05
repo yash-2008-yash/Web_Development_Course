@@ -1,0 +1,6 @@
+EXERCISE 8
+
+You have a blue box as the background.
+Inside that blue box, there is a red ball.
+The ball should bounce and go towards the right side.
+Use CSS Animation / CSS Transition to do this exercise.

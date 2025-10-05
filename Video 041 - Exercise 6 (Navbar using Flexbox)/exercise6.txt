@@ -1,0 +1,5 @@
+EXERCISE 6
+
+Create a navigation bar exactly as in this website.
+Use CSS flexbox to do this exercise.
+Website: https://www.ultraedit.com

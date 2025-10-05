@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS object-fit</title>
+</head>
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .container1 {
+        height: 200px;
+        width: 400px;
+        border: 2px solid red;
+    }
+
+    .container2 {
+        height: 200px;
+        width: 400px;
+        border: 2px solid red;
+    }
+
+    .container2 img {
+        object-fit: cover;
+        object-position: 0 -40px;
+        /* You can decide which part of the image can be displayed */
+    }
+
+    .container3 {
+        height: 200px;
+        width: 400px;
+        border: 2px solid red;
+    }
+
+    .container3 img {
+        object-fit: contain;
+    }
+</style>
+
+<body>
+    <div class="container1">
+        <img src="leonardo.jpg" alt="image" height="200" width="400">
+        WITHOUT OBJECT-FIT
+    </div>
+
+    <br><br>
+
+    <div class="container2">
+        <img src="leonardo.jpg" alt="image" height="200" width="400">
+        WITH OBJECT_FIT: COVER
+    </div>
+
+    <br><br>
+
+    <div class="container3">
+        <img src="leonardo.jpg" alt="image" height="200" width="400">
+        WITH OBJECT_FIT: CONTAIN
+    </div>
+</body>
+
+</html>
