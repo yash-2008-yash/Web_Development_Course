@@ -1,0 +1,17 @@
+You might think HTML, CSS, JavaScript is enough to make good websites.
+Nah, that's not the case.
+
+We need to design the website before creating/developing the website.
+In big-scale websites, designing is done before the actual development of the website.
+
+That is, to make the website look more eye-appealing, we need to properly design it.
+That's the job of website designer.
+
+Figma is a tool which helps us to design the website.
+With Figma, we can basically create a prototype of our website before developing it.
+
+Imagine you made a website, working your ass off, and your client says "Nah, I don't like this."
+It would feel absolutely bad. So, with Figma, we can create a prototype, ask our client whether they like it or not,
+then we can develop the actual website.
+
+Figma Website: www.figma.com
