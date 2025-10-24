@@ -1,4 +1,4 @@
 Netflix Clone Using HTML and CSS
 
-You can find it in my GitHub repo.
+You can find the repository in my GitHub profile.
 https://www.github.com/yash-2008-yash
