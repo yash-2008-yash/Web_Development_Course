@@ -1,0 +1,11 @@
+EXERCISE 9
+
+Build a faulty calculator which performs operations in a wrong way.
+
+When we ask for addition, it should do subtraction.
+When we ask for subtraction, it should do division.
+When we ask for multiplication, it should do addition.
+When we ask for division, it should do exponentiation.
+
+The catch is, it shouldn't be faulty all the times.
+It should be faulty only 10% of the time.
