@@ -1,0 +1,12 @@
+Create a Business Name Generator with JavaScript.
+
+ADJECTIVES: Crazy, Amazing, Fire
+SHOP NAMES: Engine, Foods, Garments
+ANOTHER WORD: Bros, Limited, Hub
+
+You should take each word from these 3 sections and merge it to a business name.
+For example, Crazy Foods Hub, Fire Engine Bros, etc.
+
+It should create a random business name everytime executed.
+
+NOTE: You should not use Arrays to solve this exercise.
