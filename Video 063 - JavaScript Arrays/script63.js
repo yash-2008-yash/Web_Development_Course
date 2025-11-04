@@ -17,5 +17,5 @@ console.log(array[3])
 // This will print the element of index 3, which is 45
 
 array[6] = 3.142
-console.log(array)
+console.log(array) // Array: [12, 23, 34, 45, 56, "Hello", 3.142]
 // Now that that value is updated, the array will be updated

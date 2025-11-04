@@ -3,7 +3,7 @@
 let array = [1, 3, 5, 7, 9]
 
 // toString() method
-// It converts the array into an string
+// It converts the array into a string
 console.log(array.toString())
 
 // join() method
@@ -47,7 +47,7 @@ console.log(array)
 let combined = [1, 2, 3]
 let first = [4, 5, 6]
 let second = [7, 8, 9]
-console.log(combined.concat(first, second)) // Array: 1, 2, 3, 4, 5, 6, 7, 8, 9
+console.log(combined.concat(first, second)) // Array: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 // sort() method
 // It'll sort the elements
@@ -70,7 +70,7 @@ console.log(numbers) // Array: [12, 67, 78, 89, 90]
 let numbers_2 = [1, 3, 5, 7, 9, 11, 13, 15]
 // INDEXING->    0  1  2  3  4   5   6   7
 numbers_2.splice(0, 3, 11, 33, 55)
-// 0,3 means elements from 0 to 2 (excluding 3) will be replaced by the given 11, 33, 55
+// It means start from index 0, remove 3 elements and replace them with 11, 33, 55
 console.log(numbers_2) // Array: [11, 33, 55, 7, 9, 11, 13, 15]
 
 // slice() method
@@ -86,3 +86,16 @@ console.log(numbers_3.slice(2)) // Array: [34, 45, 56, 67, 78, 89]
 // It'll reverse the elements of the array
 let numbers_4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 console.log(numbers_4.reverse()) // Array: [10, 9, 8, 7, 6, 5, 4, 3, 2 , 1]
+
+// indexOf() method
+// It'll return the index of an given element
+// It's used to find the position of an element in an array
+let vowels = ['a', 'e', 'i', 'o', 'u']
+console.log(vowels.indexOf('i')) // Index: 2
+console.log(vowels.indexOf('m')) // Index: -1 (Element isn't in the array)
+
+// includes() method
+// It'll return true/false if array contains a specific element in it
+let starks = ["Eddard", "Catelyn", "Robb", "Sansa", "Arya", "Bran", "Rickon"]
+console.log(starks.includes("Sansa")) // true
+console.log(starks.includes("Tyrion")) //false

@@ -21,43 +21,10 @@ let random_number_1 = Math.floor(Math.random() * 3) + 1
 let random_number_2 = Math.floor(Math.random() * 3) + 1
 let random_number_3 = Math.floor(Math.random() * 3) + 1
 
-// Variable declarations for result statement
-let first_word;
-let second_word;
-let third_word;
-
-// Condition for selecting one of the adjectives
-if (random_number_1 == 1) {
-    first_word = adjectives[1]
-}
-else if (random_number_1 == 2) {
-    first_word = adjectives[2]
-}
-else {
-    first_word = adjectives[3]
-}
-
-// Condition for selecting one of the shop names
-if (random_number_2 == 1) {
-    second_word = shop_names[1]
-}
-else if (random_number_2 == 2) {
-    second_word = shop_names[2]
-}
-else {
-    second_word = shop_names[3]
-}
-
-// Condition for selecting one of the another words
-if (random_number_3 == 1) {
-    third_word = another_word[1]
-}
-else if (random_number_3 == 2) {
-    third_word = another_word[2]
-}
-else {
-    third_word = another_word[3]
-}
+// Variables to store the words
+let first_word = adjectives[random_number_1]
+let second_word = shop_names[random_number_2]
+let third_word = another_word[random_number_3]
 
 // Final result
 console.log(`Company name : ${first_word} ${second_word} ${third_word}`)
