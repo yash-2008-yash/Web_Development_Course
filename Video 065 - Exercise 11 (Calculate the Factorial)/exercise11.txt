@@ -1,0 +1,4 @@
+EXERCISE 11
+
+Write a JS program to calculate the factorial of a number.
+Use 'for' loops and reduce() method to solve this exercise.
