@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Object Model</title>
+</head>
+
+<body>
+    <script>
+        // This'll show alert message when webpage is opened
+        window.alert("Welcome!")
+
+        // This opens the given website when webpage is opened
+        window.open("https://www.codewithharry.com/notes")
+
+        // This'll print the webpage's href in the console
+        console.log(window.location.href)
+
+        // This'll alert after 6seconds after opening the webpage
+        setTimeout(() => alert("I am watching you!"), 6000)
+
+        // BOM is a set of objects provided by the web browser to JavaScript
+        // With this, JS can interact with the browser itself, not just the webpage
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <script>
+        document.title = "JavaScript DOM"
+        // Webpage's title was replaced by this new title
+
+        console.log(document.title) // Prints title in the console
+        console.log(document.body) // Prints the body code in the console
+
+        // We can change styles using JS
+        // This'll add inline styles into the elements
+        document.body.style.backgroundColor = "blueviolet"
+        document.body.style.color = "white"
+
+        // DOM is a tree with HTML elements as leaves, created by the Browser
+        // JavaScript uses this DOM tree to access elements of HTML
+    </script>
+</body>
+
+</html>
