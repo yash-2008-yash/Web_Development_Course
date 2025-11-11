@@ -1,29 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Browser Object Model</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        // This'll show alert message when webpage is opened
-        window.alert("Welcome!")
+      // This'll show alert message when webpage is opened
+      window.alert("Welcome!"); // Same as alert("Welcome!")
 
-        // This opens the given website when webpage is opened
-        window.open("https://www.codewithharry.com/notes")
+      // This opens the given website when webpage is opened
+      window.open("https://www.google.com");
+      
+      // This'll print the webpage's href in the console
+      console.log(window.location.href);
 
-        // This'll print the webpage's href in the console
-        console.log(window.location.href)
+      // This'll alert after 6 seconds after opening the webpage
+      setTimeout(() => alert("I am watching you!"), 6000);
 
-        // This'll alert after 6 seconds after opening the webpage
-        setTimeout(() => alert("I am watching you!"), 6000)
+      // This shows the browser details
+      console.log(navigator.userAgent);
+      // Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36
 
-        // BOM is a set of objects provided by the web browser to JavaScript
-        // With this, JS can interact with the browser itself, not just the webpage
+      // This shows the user's browser's language
+      console.log(navigator.language); // en-GB
+
+      // This'll show the user's screen size in pixels
+      console.log(screen.width); // 1366
+      console.log(screen.height); // 768
+
+      // BOM is a set of objects provided by the web browser to JavaScript
+      // With this, JS can interact with the browser itself, not just the webpage
     </script>
-</body>
-
+  </body>
 </html>
