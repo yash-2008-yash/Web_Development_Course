@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting Elements By Tag Names</title>
+</head>
+
+<body>
+    <h1>H1 Heading</h1>
+    <h2>H2 Heading</h2>
+    <h1>H1 Heading</h1>
+    <h2>H2 Heading</h2>
+    <h1>H1 Heading</h1>
+    <h2>H2 Heading</h2>
+
+    <script>
+        // Imagine I want to make the h1 tag element's bg-color as red
+
+        for (let ele of document.getElementsByTagName("h1")) {
+            ele.style.backgroundColor = "red"
+        }
+
+        // getElementsByTagName() returns a HTML collection
+        // If we have to select all the tag elements, we have to run a 'for loop'
+    </script>
+</body>
+
+</html>

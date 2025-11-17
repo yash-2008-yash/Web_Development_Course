@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting All Elemenets By Query</title>
+</head>
+
+<body>
+    <script>
+        // querySelectorAll() selects all the elements, not just the first one
+        // So, lets do the same thing using querySelectorAll()
+
+        // document.querySelectorAll(".text").style.color = "red"
+        // But, actually this is a wrong method in JS. Let's see why.
+
+        console.log(document.querySelectorAll(".text"))
+        // NodeList(3) [div.text, div.text, div.text]
+
+        // The thing is 'querySelectorAll' returns a node list
+        // We can't apply styles on a list, can we? NAH!
+
+        // So, we have to run a 'for loop' to iterate each element in that node list and then apply styles to it
+
+        document.querySelectorAll(".text").forEach(ele => {
+            ele.style.color = "red"
+        })
+
+        // Now, all the 'text' class elements are red
+    </script>
+</body>
+
+</html>

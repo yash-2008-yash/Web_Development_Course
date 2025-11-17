@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting Elements By Query</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text">Text 1</div>
+        <div class="text">Text 2</div>
+        <div class="text">Text 3</div>
+    </div>
+
+    <script>
+        document.querySelector(".text").style.color = "red"
+        // This'll select the first HTML element which has the class "text"
+
+        // Now, I want to make all the element's color as "red"
+        // We have 'querySelectorAll()' which selects all the elements with class "text"
+    </script>
+</body>
+
+</html>

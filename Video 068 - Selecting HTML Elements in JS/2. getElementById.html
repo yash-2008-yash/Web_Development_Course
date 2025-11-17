@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting Element By ID</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text">Text 1</div>
+        <div class="text" id="red-text">Text 2</div>
+        <div class="text">Text 3</div>
+    </div>
+
+    <script>
+        // Now, lets use getElementById() to do the same thing
+        // Imagine I want to make the 'Text 2' font-color as red
+
+        document.getElementById("red-text").style.color = "red"
+        // This'll select the element which has the ID as "red-text"
+
+        // Now, even if I add new texts in between, the style won't change
+        // Because, we have selected by ID, not as an array element like before
+    </script>
+</body>
+
+</html>

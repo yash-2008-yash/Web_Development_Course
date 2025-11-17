@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting Elements By Class</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="text">Text 1</div>
+        <div class="text">Text 2</div>
+        <div class="text">Text 3</div>
+    </div>
+
+    <script>
+        // Imagine I want to make the 'Text 2' font-color as red
+
+        let texts = document.getElementsByClassName("text")
+        // This'll select all the elements with class "text"
+        console.log(texts) // 0:div.text 1:div.text 2:div.text
+
+        texts[1].style.color = "red"
+        // We made the 'Text 2' font-color as red
+
+        // But, what if I inserted a new box between 'Text 1' and 'Text 2'
+        // The styling will be applied to the new inserted text
+        // Because, we told texts[1], so it styles the element in position 1
+
+        // So, instead we can getElementById()        
+    </script>
+</body>
+
+</html>

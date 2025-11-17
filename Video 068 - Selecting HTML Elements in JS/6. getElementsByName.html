@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting Elements By Name Atrribute</title>
+</head>
+
+<body>
+    <div name="first">FIRST</div>
+    <div name="second">SECOND</div>
+    <div name="third">THIRD</div>
+
+    <script>
+        // Imagine I want to style the "second" element
+
+        document.getElementsByName("second")[0].style.color = "red"
+
+        // We have to use [0] because getElementsByName() returns an array
+        // So, we have to access elements using their indexes
+    </script>
+</body>
+
+</html>
