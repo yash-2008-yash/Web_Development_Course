@@ -1,0 +1,8 @@
+EXERCISE 12
+
+In the given HTML file, there are 5 boxes.
+You should assign each box a random color.
+
+NOTE: No touching the HTML file!
+
+NOTE: Use JavaScript DOM Tree to solve this exercise.
