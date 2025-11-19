@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Change Using JS</title>
+</head>
+
+<body>
+    <div id="box">Welcome to HELL!</div>
+
+    <script>
+        setInterval(() => {
+            let box = document.getElementById("box");
+
+            if (box.style.color === "red") {
+                box.style.color = "black"
+            }
+
+            else {
+                box.style.color = "red"
+            }
+        }, 100);
+
+    </script>
+</body>
+
+</html>
