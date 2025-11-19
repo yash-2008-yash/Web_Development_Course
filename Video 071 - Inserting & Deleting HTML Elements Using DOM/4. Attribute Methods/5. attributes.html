@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attributes</title>
+</head>
+
+<body>
+    <div class="box" title="element" style="color: red;">I AM A BOX</div>
+
+    <script>
+        let box = document.querySelector(".box")
+
+        console.log(box.attributes) // {0: class, 1: title, 2: style}
+
+        // 'attributes' lists out all the attributes of the given element
+    </script>
+</body>
+
+</html>

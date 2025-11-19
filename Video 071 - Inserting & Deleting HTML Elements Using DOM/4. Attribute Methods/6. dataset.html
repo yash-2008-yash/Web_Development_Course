@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dataset</title>
+</head>
+
+<body>
+    <div class="box" data-code_writer="Yashwanth" data-code_topic="JS DOM Manipulation">
+        I AM A BOX
+    </div>
+
+    <!-- We can create custom attributes for a HTML element -->
+    <!-- Go to HTML element and type 'data-' -->
+    <!-- After the hypen, you can write a custom attribute name and value -->
+    <!-- Example: data-code_writer="Yashwanth" -->
+
+    <script>
+        let box = document.querySelector(".box")
+
+        console.log(box.dataset)
+        // code_topic: "JS DOM Manipulation"
+        // code_writer: "Yashwanth"
+
+        // 'dataset' lists out all the custom data- attributes of the given element
+    </script>
+</body>
+
+</html>

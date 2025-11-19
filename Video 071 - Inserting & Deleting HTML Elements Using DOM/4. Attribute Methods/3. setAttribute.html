@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setAttribute</title>
+</head>
+
+<body>
+    <div class="box">I AM A BOX</div>
+
+    <script>
+        let box = document.querySelector(".box")
+
+        box.setAttribute("title", "html_element")
+
+        // 'setAttribute' sets the value for an attribute
+        // If the attritube already exists, it'll update the value
+        // If the attribute doesn't exist, it'll create it inside the element
+
+        /*
+
+        NOTE: You can't see the addition of the new attribute in your .html file
+        That's because JavaScript can't overwrite your local source code
+        JS will add the attribute in the DOM tree
+        If you see the code in the browser, it'll show the new attrribute
+
+        */
+    </script>
+</body>
+
+</html>

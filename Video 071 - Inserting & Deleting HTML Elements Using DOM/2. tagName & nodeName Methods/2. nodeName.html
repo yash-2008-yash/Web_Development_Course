@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tagName</title>
+</head>
+
+<body>
+    <!-- I AM A COMMENT -->
+    <div class="container">
+        <div class="box">I AM A BOX</div>
+    </div>
+
+    <script>
+        let comment = document.body.childNodes[1]
+        console.log(comment.nodeName); // #comment
+
+        // tagName only works for HTML elements
+        // nodeName even works for nodes like 'text', 'comment', etc.
+    </script>
+</body>
+
+</html>

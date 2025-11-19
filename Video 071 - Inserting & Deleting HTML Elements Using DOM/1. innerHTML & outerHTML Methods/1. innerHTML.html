@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">I AM A BOX</div>
+    </div>
+
+    <script>
+        let container = document.querySelector(".container")
+        // This'll select the first HTML element with class="container"
+
+        let box = document.querySelector(".box")
+        // This'll select the first HTML element with class="box"
+
+        console.log(box.innerHTML) // I AM A BOX
+        // This'll print the HTML of .box
+
+        console.log(container.innerHTML) // <div class="box">I AM A BOX</div>
+        // This'll print the HTML of .container
+        // But, we didn't get text like before, so we should use 'innerText'
+
+        console.log(container.innerText) // I AM A BOX
+        // This'll print the HTML of .container as text
+    </script>
+</body>
+
+</html>

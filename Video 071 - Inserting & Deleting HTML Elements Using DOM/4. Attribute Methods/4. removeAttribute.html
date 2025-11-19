@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>removeAttribute</title>
+</head>
+
+<body>
+    <div class="box" title="element">I AM A BOX</div>
+
+    <script>
+        let box = document.querySelector(".box")
+
+        box.removeAttribute("title")
+
+        // 'removeAttribute' removes the given attribute from the element
+        // Even here, you can't see the changes in the local .html file
+        // Because JS updates code in DOM, not in your local source code
+    </script>
+</body>
+
+</html>
