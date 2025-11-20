@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>afterbegin</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">BOX 1</div>
+        <div class="box2">BOX 2</div>
+        <div class="box3">BOX 3</div>
+    </div>
+
+    <script>
+        let container = document.querySelector(".container")
+
+        container.insertAdjacentHTML("afterbegin", "<h1>Hello, World!</h1>")
+        // 'afterbegin' adds the element after the beginning of the container
+
+        // <div class="container">
+        //    <h1>Hello, World!</h1>
+        //    <div class="box1">BOX 1</div>
+        //    <div class="box2">BOX 2</div>
+        //    <div class="box3">BOX 3</div>
+        // </div>
+    </script>
+</body>
+
+</html>

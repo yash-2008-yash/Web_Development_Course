@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="first">I AM A BOX</div>
+    </div>
+
+    <script>
+        let box = document.querySelector(".first")
+
+        box.classList.toggle("second")
+
+        // 'toggle' works on a principle which is:
+        // "If the door's closed, I will open it. If the door's opened, I Will close it."
+
+        // 'toggle' takes the given element and checks the element's classes
+        // If the given class already exists, it'll remove that class
+        // If the given class doesn't exist, it'll add it
+
+        // In this case, there's no "second" class in the box
+        // So, 'toggle' will add the class "second" to the class list
+    </script>
+</body>
+
+</html>

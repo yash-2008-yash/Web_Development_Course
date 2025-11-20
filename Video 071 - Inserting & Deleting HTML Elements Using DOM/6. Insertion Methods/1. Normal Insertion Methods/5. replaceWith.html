@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion (replaceWith)</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">I AM A BOX</div>
+    </div>
+
+    <script>
+        let insertion_element = document.createElement("div") // Creating a 'div' element
+        insertion_element.setAttribute("class", "circle") // Setting the class
+        insertion_element.innerHTML = "I AM A CIRCLE" // Setting the HTML content
+
+        let box = document.querySelector(".box")
+
+        box.replaceWith(insertion_element)
+        // 'replaceWith' replaces the element with the new element
+
+        // <div class="container">
+        //    <div class="circle">I AM A CIRCLE</div>
+        // </div>
+    </script>
+</body>
+
+</html>

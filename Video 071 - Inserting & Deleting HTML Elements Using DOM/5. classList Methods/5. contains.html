@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contains</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="first second third">I AM A BOX</div>
+    </div>
+
+    <script>
+        let box = document.querySelector(".first")
+
+        console.log(box.classList.contains("third")) // true
+
+        // 'contains' checks whether the given class exist in the element or not
+
+        // In this case, the box contains the class "third", so it'll retrun 'true'
+    </script>
+</body>
+
+</html>

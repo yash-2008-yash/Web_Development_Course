@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion (after)</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">BOX 1</div>
+        <div class="box2">BOX 2</div>
+    </div>
+
+    <script>
+        let insertion_element = document.createElement("div") // Creating a 'div' element
+        insertion_element.setAttribute("class", "inserted_box") // Setting the class
+        insertion_element.innerHTML = "I am an inserted element" // Setting the HTML content
+
+        let container = document.querySelector(".container")
+
+        container.after(insertion_element)
+        // 'after' adds the new element after the ending of container
+
+        // <div class="container">
+        //     <div class="box1">BOX 1</div>
+        //     <div class="box2">BOX 2</div>
+        // </div>
+        // <div class="inserted_box">I am an inserted element</div>
+
+    </script>
+</body>
+
+</html>

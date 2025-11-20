@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion (replaceChildren)</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">I AM A BOX</div>
+        <div class="circle">I AM A CIRCLE</div>
+    </div>
+
+    <script>
+        let rectangle = document.createElement("div") // Creating a 'div' element
+        rectangle.setAttribute("class", "rectangle") // Setting the class
+        rectangle.innerHTML = "I AM A RECTANGLE" // Setting the HTML content
+
+        let oval = document.createElement("div") // Creating a 'div' element
+        oval.setAttribute("class", "oval") // Setting the class
+        oval.innerHTML = "I AM AN OVAL" // Setting the HTML content
+
+        let container = document.querySelector(".container")
+
+        container.replaceChildren(rectangle, oval)
+        // 'replaceChildren' replaces the children with new elements
+
+        // <div class="container">
+        //    <div class="rectangle">I AM A RECTANGLE</div>
+        //    <div class="oval">I AM AN OVAL</div>
+        // </div>
+    </script>
+</body>
+
+</html>

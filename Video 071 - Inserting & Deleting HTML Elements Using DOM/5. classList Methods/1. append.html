@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion (append)</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">BOX 1</div>
+        <div class="box2">BOX 2</div>
+    </div>
+
+    <script>
+        let insertion_element = document.createElement("div") // Creating a 'div' element
+        insertion_element.setAttribute("class", "inserted_box") // Setting the class
+        insertion_element.innerHTML = "I am an inserted element" // Setting the HTML content
+
+        let container = document.getElementsByClassName("container")
+
+        container.append(insertion_element)
+    </script>
+</body>
+
+</html>

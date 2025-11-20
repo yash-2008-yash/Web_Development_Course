@@ -1,0 +1,10 @@
+Normal insertion is good, but it has one flaw in it.
+
+document.body.append("<h1>Hello, World!</h1>")
+
+You might think that this'll add a new h1 tag into the end of the body.
+Nah! It just adds a plain text saying <h1>Hello, World!</h1>.
+
+But, with insertAdjacent methods, we can insert actual elements, not just plain text.
+
+And, that's why we are learning 'insertAdjacent' methods now.
