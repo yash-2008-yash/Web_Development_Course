@@ -1,0 +1,18 @@
+EXERCISE 13
+
+In this exercise, we should create a dynamic website builder.
+
+NOTE: Use card.png as reference.
+
+We should create a JS function which takes the following arguments:
+    i. Title of the video
+    ii. Duration of the video
+    iii. Channel Name
+    iv. Views
+    v. The months it has been since the video released
+    vi. Video Thumbnail
+
+NOTE: 'Views' should be an integer.
+If the value is 13000, it should be shown as 13K.
+
+When we give inputs, it should build an exact copy like card.png with the given inputs.

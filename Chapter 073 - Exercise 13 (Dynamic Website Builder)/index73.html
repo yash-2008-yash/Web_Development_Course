@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 13</title>
+    <link rel="stylesheet" href="style73.css">
+</head>
+
+<body>
+
+    <div class="inputs">
+        <label for="thumbnail_input">Upload your thumbnail.................................................................</label>
+        <input type="file" id="thumbnail_input" accept="image/*"> <!-- Thumbnail Image --> <br>
+
+        <label for="duration_input">Enter the duration of the video.............................................</label>
+        <input type="text" id="duration_input"> <!-- Duration -->
+        <input type="button" value="Enter" onclick="storeDuration()"> <br>
+
+        <label for="title_input">Enter the title of the video..........................................................</label>
+        <input type="text" id="title_input"> <!-- Title -->
+        <input type="button" value="Enter" onclick="storeTitle()"> <br>
+
+        <label for="channel_name_input">Enter your channel name...........................................................</label>
+        <input type="text" id="channel_name_input"> <!-- Channel Name -->
+        <input type="button" value="Enter" onclick="storeChannel()"> <br>
+
+        <label for="views_input">Enter the number of views on your video...................</label>
+        <input type="number" id="views_input"> <!-- Views -->
+        <input type="button" value="Enter" onclick="storeViews()"> <br>
+
+        <label for="months_input">Enter the months since the video's released..........</label>
+        <input type="number" id="months_input"> <!-- Months -->
+        <input type="button" value="Enter" onclick="storeMonths()">
+    </div>
+
+    <br>
+
+    <div class="container">
+
+        <!-- Thumbnail Part -->
+        <div class="thumbnail">
+            <img id="preview" src="" alt="thumbnail">
+            <span id="duration">00:00</span>
+        </div>
+
+        <!-- Title Part -->
+        <div class="info">
+            <h3 id="title">Title</h3>
+
+            <!-- Sub-Title Part -->
+            <div class="sub_title">
+                <span id="channel_name">Channel Name</span>
+                <span class="separator">•</span>
+                <span id="views">Views</span>
+                <span class="separator">•</span>
+                <span id="months">Months</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script73.js"></script>
+
+</body>
+
+</html>
