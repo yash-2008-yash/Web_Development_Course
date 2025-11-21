@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 12</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 23px;
+    }
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 100px;
+        border: 2px solid black;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">BOX 1</div>
+        <div class="box">BOX 2</div>
+        <div class="box">BOX 3</div>
+        <div class="box">BOX 4</div>
+        <div class="box">BOX 5</div>
+    </div>
+
+    <script>
+        let boxes = document.getElementsByClassName("box")
+
+        let boxes_array = Array.from(boxes) // Converted 'boxes' into an array
+
+        // RGB Color has three values (x, y, z)
+        // I am gonna generate three random numbers for x, y, z
+        // NOTE: RGB Values stay in the range of 0 to 255
+
+        function randomColor() {
+            let rgb_value_1 = Math.floor(Math.random() * 255) + 1
+            let rgb_value_2 = Math.floor(Math.random() * 255) + 1
+            let rgb_value_3 = Math.floor(Math.random() * 255) + 1
+            return `rgb(${rgb_value_1}, ${rgb_value_2}, ${rgb_value_3})`
+        }
+
+        // Iterating through all boxes to give each a random color
+        boxes_array.forEach(element => {
+            element.style.backgroundColor = randomColor()
+        });
+    </script>
+</body>
+
+</html>
