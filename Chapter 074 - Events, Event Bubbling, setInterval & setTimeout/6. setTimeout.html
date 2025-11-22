@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+
+<body>
+    <div id="box">Welcome to HELL!</div>
+
+    <script>
+        // 'setTimeout' performs a task after a time interval (only once)
+        // In this case, the color changes after 5s (5000 milliseconds)
+
+        let time = setTimeout(() => {
+            let box = document.getElementById("box");
+
+            if (box.style.color === "red") {
+                box.style.color = "black"
+            }
+
+            else {
+                box.style.color = "red"
+            }
+        }, 5000);
+
+        console.log(time) // This returns a value. For me, it returned 1. 
+        // If you want to stop the setTimeout() from happening, you have clearTimeout()
+        // You have to type the code to stop it before it happens
+        // It's like you have to debug a bomb before it explodes
+        // clearTimeout(1) will stop the setTimeout() task
+    </script>
+</body>
+
+</html>

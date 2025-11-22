@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Example 1</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+    body {
+        font-family: "Poppins", sans-serif;
+    }
+
+    #theme_button {
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        background-color: rgb(70, 70, 255);
+        color: white;
+    }
+</style>
+
+<body>
+    <h1>Lorem, ipsum dolor.</h1>
+    <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis magni ipsum assumenda voluptatum aspernatur sint
+        maiores illum optio impedit dolore illo labore, earum nemo accusamus ipsam. Blanditiis animi ab, voluptate,
+        quibusdam eos nisi ipsa natus praesentium fugit iste ipsum distinctio vero quos suscipit temporibus. Fuga culpa
+        fugit optio magnam odit?</h4>
+
+    <button id="theme_button">Click me to change the theme</button>
+
+    <script>
+        let button = document.getElementById("theme_button")
+
+        // addEventListener() tells the element, "If this event happens to you, run this damn function"
+        // Here, I added an event called "click".
+        // When the button is clicked, the following function runs.
+        // The function changes the page to light mode to dark mode and vice-verca.
+
+        button.addEventListener("click", () => {
+            if (document.body.style.backgroundColor === "white") {
+                document.body.style.backgroundColor = "black"
+                document.body.style.color = "white"
+            }
+            else {
+                document.body.style.backgroundColor = "white"
+                document.body.style.color = "black"
+            }
+        })
+
+    </script>
+</body>
+
+</html>

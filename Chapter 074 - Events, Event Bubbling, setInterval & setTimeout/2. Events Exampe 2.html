@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Example 2</title>
+</head>
+<style>
+    .container span {
+        font-family: sans-serif;
+    }
+
+    #increment {
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        background-color: rgb(4, 131, 0);
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <span><b>COUNTER: </b></span>
+        <span id="count_value">0</span>
+    </div>
+
+    <br>
+
+    <button id="increment">BRING YOUR CURSOR TOWARDS ME FOR INCREMENT</button>
+
+    <script>
+        let counter = 0
+
+        let button = document.getElementById("increment")
+        let display = document.getElementById("count_value")
+
+        button.addEventListener("mouseover", (e) => {
+            counter++
+            display.innerHTML = `${counter}`
+        })
+    </script>
+</body>
+
+</html>

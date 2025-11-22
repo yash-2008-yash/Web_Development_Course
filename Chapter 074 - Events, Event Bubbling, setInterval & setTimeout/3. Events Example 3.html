@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Example 3</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+    p {
+        font-family: "Bebas Neue";
+        font-size: 40px;
+        text-align: center;
+    }
+
+
+    .input_box {
+        display: flex;
+        justify-content: center;
+    }
+
+    input {
+        border: 1px solid blueviolet;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-family: sans-serif;
+        font-weight: bolder;
+        text-align: center;
+        background-color: rgb(17, 17, 17);
+        color: white;
+    }
+</style>
+
+<body>
+    <p>Good morning, <span id="display"></span>.</p>
+    <div class="input_box">
+        <input type="text" id="name_input" placeholder="Enter your name">
+    </div>
+
+    <script>
+        document.getElementById("name_input").addEventListener("input", function () {
+            // document.getElementById("display").textContent = this.value;
+            document.getElementById("display").innerHTML = this.value;
+        });
+    </script>
+
+</body>
+
+</html>

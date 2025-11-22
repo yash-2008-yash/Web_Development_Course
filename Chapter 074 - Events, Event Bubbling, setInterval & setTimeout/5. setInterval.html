@@ -11,7 +11,10 @@
     <div id="box">Welcome to HELL!</div>
 
     <script>
-        setInterval(() => {
+        // 'setInterval' performs a task with a time interval
+        // In this case, the color changes every 100ms (100 milliseconds)
+
+        let time = setInterval(() => {
             let box = document.getElementById("box");
 
             if (box.style.color === "red") {
@@ -23,8 +26,9 @@
             }
         }, 100);
 
-        // 'setInterval' performs a task with a time interval
-        // In this case, the color changes every 100ms (100 milliseconds)
+        console.log(time) // This returns a value. For me, it returned 1. 
+        // If you want to stop the setInterval() loop, you have clearInterval()
+        // clearInterval(1) will stop the setInterval() loop
     </script>
 </body>
 
