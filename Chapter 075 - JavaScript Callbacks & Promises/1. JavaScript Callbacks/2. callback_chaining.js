@@ -18,7 +18,12 @@ function goodbye() {
     }, 3000);
 }
 
-hello(() => how_are_you(goodbye));
+// This is called as "Callback Chaining"
+hello(() => {
+    how_are_you(() => {
+        goodbye()
+    })
+})
 
 // This "chaining" is good, but it becomes a hell when many chainings are there
 // It becomes such a hell that the developers called it "Callback Hell" or "Pyramid of Doom"
