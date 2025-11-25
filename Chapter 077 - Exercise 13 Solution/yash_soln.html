@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 13</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+    body {
+        background-color: black;
+        color: white;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .inputs {
+        background-color: #1b1b1b;
+        border-radius: 10px;
+        font-size: 13px;
+        padding: 15px 10px;
+        width: 565px;
+    }
+
+    input {
+        border-radius: 10px;
+        border: none;
+    }
+
+    #thumbnail_input {
+        color: red;
+        border-radius: 2px;
+    }
+
+    [value="Enter"] {
+        background-color: green;
+        color: white;
+        border-radius: 8px;
+        padding: 1px 10px;
+    }
+
+    .container {
+        width: 380px;
+        background: #202020;
+        border-radius: 12px;
+        padding: 12px;
+        color: white;
+    }
+
+    .thumbnail {
+        position: relative;
+    }
+
+    .thumbnail img {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+    }
+
+    #duration {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+    }
+
+    .info {
+        margin-top: 10px;
+    }
+
+    #title {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .sub_title {
+        display: flex;
+        gap: 6px;
+        font-size: 13px;
+        color: #bbb;
+    }
+
+    .separator {
+        color: #888;
+    }
+</style>
+
+<body>
+
+    <div class="inputs">
+        <label for="thumbnail_input">Upload your
+            thumbnail.................................................................</label>
+        <input type="file" id="thumbnail_input" accept="image/*"> <!-- Thumbnail Image --> <br>
+
+        <label for="duration_input">Enter the duration of the video.............................................</label>
+        <input type="text" id="duration_input"> <!-- Duration -->
+        <input type="button" value="Enter" onclick="storeDuration()"> <br>
+
+        <label for="title_input">Enter the title of the
+            video..........................................................</label>
+        <input type="text" id="title_input"> <!-- Title -->
+        <input type="button" value="Enter" onclick="storeTitle()"> <br>
+
+        <label for="channel_name_input">Enter your channel
+            name...........................................................</label>
+        <input type="text" id="channel_name_input"> <!-- Channel Name -->
+        <input type="button" value="Enter" onclick="storeChannel()"> <br>
+
+        <label for="views_input">Enter the number of views on your video...................</label>
+        <input type="number" id="views_input"> <!-- Views -->
+        <input type="button" value="Enter" onclick="storeViews()"> <br>
+
+        <label for="months_input">Enter the months since the video's released..........</label>
+        <input type="number" id="months_input"> <!-- Months -->
+        <input type="button" value="Enter" onclick="storeMonths()">
+    </div>
+
+    <br>
+
+    <div class="container">
+
+        <!-- Thumbnail Part -->
+        <div class="thumbnail">
+            <img id="preview" src="" alt="thumbnail">
+            <span id="duration">00:00</span>
+        </div>
+
+        <!-- Title Part -->
+        <div class="info">
+            <h3 id="title">Title</h3>
+
+            <!-- Sub-Title Part -->
+            <div class="sub_title">
+                <span id="channel_name">Channel Name</span>
+                <span class="separator">•</span>
+                <span id="views">Views</span>
+                <span class="separator">•</span>
+                <span id="months">Months</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        function storeTitle() {
+            const title_value = document.getElementById("title_input").value
+            const title = document.getElementById("title")
+            title.innerHTML = title_value
+        }
+
+        function storeDuration() {
+            const duration_value = document.getElementById("duration_input").value
+            const duration = document.getElementById("duration")
+            duration.innerHTML = duration_value
+        }
+
+        function storeChannel() {
+            const channel_value = document.getElementById("channel_name_input").value
+            const channel = document.getElementById("channel_name")
+            channel.innerHTML = channel_value
+        }
+
+        function storeViews() {
+            const views_value = document.getElementById("views_input").value
+            const views = document.getElementById("views")
+            views.innerHTML = `${views_value} views`
+        }
+
+        function storeMonths() {
+            const months_value = document.getElementById("months_input").value
+            const months = document.getElementById("months")
+            months.innerHTML = `${months_value} months old`
+
+        }
+
+        const thumbnail = document.getElementById("thumbnail_input")
+        const preview = document.getElementById("preview")
+
+        thumbnail.addEventListener('change', function () {
+            const file = thumbnail.files[0]
+
+            if (!file) return;
+
+            preview.src = URL.createObjectURL(file)
+        });
+    </script>
+
+</body>
+
+</html>
