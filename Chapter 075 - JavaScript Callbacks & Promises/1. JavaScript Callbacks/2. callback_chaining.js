@@ -22,3 +22,19 @@ hello(() => how_are_you(goodbye));
 
 // This "chaining" is good, but it becomes a hell when many chainings are there
 // It becomes such a hell that the developers called it "Callback Hell" or "Pyramid of Doom"
+
+// Example of CALLBACK HELL (or) PYRAMID OF DOOM:
+
+// task1(() => {
+//     task2(() => {
+//         task3(() => {
+//             task4(() => {
+//                 task5(() => {
+//                     task6(() => {
+//                         AND SO ON...
+//                     })
+//                 })
+//             })
+//         })
+//     })
+// })

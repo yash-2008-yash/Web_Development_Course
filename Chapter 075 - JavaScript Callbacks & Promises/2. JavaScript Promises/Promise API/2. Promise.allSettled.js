@@ -15,7 +15,7 @@ function walkDog() {
 function cleanKitchen() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            const kitchenCleaned = false
+            const kitchenCleaned = true
             if (kitchenCleaned) {
                 resolve("✅ You cleaned the kitchen!")
             } else {
@@ -39,15 +39,18 @@ function takeOutTrash() {
     })
 }
 
-// Promise.all()
-Promise.all([walkDog(), cleanKitchen(), takeOutTrash()])
-    .then(values => {
-        console.log(values)
-        console.log("You finished all the tasks!")
-    })
-    .catch(error => {
-        console.log("One of the tasks failed: ", error)
+// Promise.allSettled()
+Promise.allSettled([walkDog(), cleanKitchen(), takeOutTrash()])
+    .then(results => {
+        console.log(results)
     })
 
-// Runs all promises and returns only if all succeed.
-// If any one fails, the whole thing fails.
+// Runs all promises, but never fails.
+// It waits for all of them and tells us which succeeded/failed.
+
+// So, no matter which task succeeds or which fails, it always gives us the output
+// [
+//  { status: 'fulfilled', value: '✅ You took the dog for a walk!' },
+//  { status: 'rejected', reason: "❌ You didn't clean the kitchen!" },
+//  { status: 'fulfilled', value: '✅ You took out the trash!' }
+// ]

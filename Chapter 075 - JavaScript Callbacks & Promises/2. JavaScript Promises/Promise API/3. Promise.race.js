@@ -28,7 +28,7 @@ function cleanKitchen() {
 function takeOutTrash() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            const trashTakenOut = true
+            const trashTakenOut = false
 
             if (trashTakenOut) {
                 resolve("✅ You took out the trash!")
@@ -49,7 +49,11 @@ Promise.race([walkDog(), cleanKitchen(), takeOutTrash()])
     })
 
 // 🏁 First task finished: ✅ You took out the trash!
+// It's because takeOutTrash() only takes 500ms to complete, so it's the first task to be finished
+
+// Now, if I made 'trashTakenOut' as 'false', the output will be:
+// 🏁 First task failed: ❌ You didn't take the trash out!
 
 // It showed takeOutTrash(), but didn't show the failed cleanKitchen() task
-// It's because Promise.race() doesn't care who succeeds or fails.
-// It only cares who finishes first.
+// It's because Promise.race() doesn't give a fuck about who succeeds or fails.
+// It only cares about who succeeds first & who fails first.

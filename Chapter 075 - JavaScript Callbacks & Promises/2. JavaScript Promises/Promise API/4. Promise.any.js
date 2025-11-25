@@ -28,7 +28,7 @@ function cleanKitchen() {
 function takeOutTrash() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            const trashTakenOut = true
+            const trashTakenOut = false
 
             if (trashTakenOut) {
                 resolve("✅ You took out the trash!")
@@ -48,10 +48,14 @@ Promise.any([walkDog(), cleanKitchen(), takeOutTrash()])
         console.log("All tasks failed: ", error)
     })
 
-// First successful task:  ✅ You took out the trash!
 
 // Promise.any() returns the first successful promise and ignores the failures.
-// Promise.any() fails only if all the promises fail.
+// It fails only if all the promises fail.
+
+// Now, we know that takeOutTrash() is the first task to be completed, so let's make it false
+// So, now the first successful task is cleanKitchen(), so the output will be:
+
+// First successful task:  ✅ You cleaned the kitchen!
 
 // IF ALL THE PROMISES WERE REJECTED:
 // All tasks failed: [AggregateError: All promises were rejected] {
