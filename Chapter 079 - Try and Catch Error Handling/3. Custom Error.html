@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Error</title>
+</head>
+
+<body>
+    <script>
+        alert("WELCOME TO ADDITION OF TWO NUMBERS!")
+
+        let number1 = prompt("Enter first number")
+        let number2 = prompt("Enter second number")
+
+        let answer = parseInt(number1) / parseInt(number2)
+
+        alert("Ckeck the console for answer.")
+
+        if (isNaN(number1) || isNaN(number2)) {
+            throw new Error("Inputs should be numbers, asshole!")
+            // This'll throw error if the user gives invalid inputs
+        } else {
+            console.log(`Answer is ${answer}`)
+        }
+    </script>
+</body>
+
+</html>
