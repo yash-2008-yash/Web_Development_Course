@@ -9,9 +9,13 @@
 
 <style>
     body {
-        background-color: blueviolet;
+        background-color: black;
         color: white;
         font-family: sans-serif;
+    }
+
+    h1{
+        font-size: 40px;
     }
 
     button {
@@ -55,8 +59,9 @@
                     <p><strong>Punchline:</strong> ${data.punchline}</p>
                 `;
             } catch (error) {
-                progress.innerText = "Error fetching joke!";
-                display.innerText = error;
+                progress.innerText = "Error fetching joke! Check your internet connection."
+                // display.innerText = error;
+                console.log(error)
             }
         }
     </script>

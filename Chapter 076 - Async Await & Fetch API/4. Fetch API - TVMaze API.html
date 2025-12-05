@@ -58,42 +58,46 @@
 
   <script>
     function searchMovie() {
-      const query = document.getElementById("searchBox").value.trim();
+      let searchBox = document.getElementById("searchBox")
+      let poster = document.getElementById("poster")
+
+      const query = searchBox.value.trim()
+
       if (!query) {
-        alert("Enter a name first!");
+        alert("Enter the TV Show name first!")
         return;
       }
 
-      // Clear old poster
-      document.getElementById("poster").innerHTML = "Loading...";
+      poster.innerHTML = "Loading..."
 
-      // Fetch from TVMaze API
+      // Fetching data from the TVMaze API
       fetch(`https://api.tvmaze.com/singlesearch/shows?q=${encodeURIComponent(query)}`)
         .then(response => response.json())
         .then(data => {
-          console.log(data);
+          console.log(data)
 
-          const imageUrl = data.image?.original || data.image?.medium;
+          const imageUrl = data.image?.original || data.image?.medium
 
           if (!imageUrl) {
-            document.getElementById("poster").innerHTML = "No poster found.";
+            document.getElementById("poster").innerHTML = "No poster found for this TV show."
             return;
           }
 
-          const img = document.createElement("img");
-          img.src = imageUrl;
-          img.style.width = "300px";
-          img.style.border = "1px solid white";
-          img.style.borderRadius = "5px";
+          // TV Show Poster
+          const img = document.createElement("img")
+          img.src = imageUrl
+          img.style.width = "300px"
+          img.style.border = "1px solid white"
+          img.style.borderRadius = "5px"
 
-          // Clear previous result and show new one
-          const box = document.getElementById("poster");
-          box.innerHTML = "";
-          box.appendChild(img);
+          // Clearing the previous poster to display the new poster
+          poster.innerHTML = ""
+          poster.appendChild(img)
         })
-        .catch(err => {
-          console.log(err);
-          document.getElementById("poster").innerHTML = "TV show not found!";
+
+        .catch(error => {
+          console.log(error)
+          poster.innerHTML = "TV Show not found!"
         });
     }
   </script>
