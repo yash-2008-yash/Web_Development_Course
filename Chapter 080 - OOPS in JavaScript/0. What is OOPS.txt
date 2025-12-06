@@ -6,7 +6,7 @@ Many customers come and fill that form to create their account in that bank.
 Bank doesn't create separate forms for each customer.
 They make a template of that form, and it's same for all the customers.
 For, example, a customer called Rohan fills a form. Now, it's Rohan's form.
-Another guy called Bhuvan fills a form. Now, it's Hrithik's form.
+Another guy called Bhuvan fills a form. Now, it's Bhuvan's form.
 
 Here, the bank form template is the 'class' which is a blueprint for creating objects.
 You write it once, and you can create n number of objects.
