@@ -1,0 +1,37 @@
+OOP in JavaScript is a way of organizing code using classes and objects.
+Programs become easier to maintain, scale, and understand with OOPS usage.
+
+Imagine there is a bank and there's a form to create an account.
+Many customers come and fill that form to create their account in that bank.
+Bank doesn't create separate forms for each customer.
+They make a template of that form, and it's same for all the customers.
+For, example, a customer called Rohan fills a form. Now, it's Rohan's form.
+Another guy called Bhuvan fills a form. Now, it's Hrithik's form.
+
+Here, the bank form template is the 'class' which is a blueprint for creating objects.
+You write it once, and you can create n number of objects.
+
+Here, Rohan's form and Bhuvan's form are 'objects'.
+They are created from the blueprint of the bank form.
+
+This is OOPS. But, how it's useful for devs in real life?
+
+- Reusability of code
+  
+    If you create a User class once, you can make thousands of user objects without rewriting the same logic again and again. In big projects, this saves insane amounts of time.
+
+- Makes debugging easier
+
+    If something breaks, you will know exactly where to look because the code's well organized with OOPS.
+
+- Makes team work effective
+
+    In professional dev teams, different people work on different classes without stepping on each other's toes.
+
+In short, OOPS gives us clean structure, reusability, scalability, and maintainability.
+These are crucial in real-world applications like Web apps, Banking and Enterprise Systems, etc.
+
+NOTE: We, people, pronounce it as OOPS, but it's OOP.
+It became common among people pronouncing it as OOPS.
+For example, people say "ATM Machine", which is wrong, but common.
+So, just know the right thing, that's all.
