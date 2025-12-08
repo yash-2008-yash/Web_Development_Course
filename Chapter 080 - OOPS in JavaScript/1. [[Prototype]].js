@@ -25,7 +25,7 @@ Object.setPrototypeOf(Ned_Stark, House_Stark)
 // If we add new keys in 'House_Stark', we can still access those new keys through 'Ned_Stark'.
 // It's because they both are interconnected via 'Prototype Chain'.
 
-console.log(Ned_Stark.words) // "Winter is Coming."
+console.log(Ned_Stark.words)   // "Winter is Coming."
 console.log(Ned_Stark.kingdom) // Winterfell
 
 // Now, JS willn't say 'undefined', because it found the 'words' and 'kingdom' in it's prototype.

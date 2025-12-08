@@ -1,5 +1,4 @@
 OOP in JavaScript is a way of organizing code using classes and objects.
-Programs become easier to maintain, scale, and understand with OOPS usage.
 
 Imagine there is a bank and there's a form to create an account.
 Many customers come and fill that form to create their account in that bank.
@@ -16,22 +15,18 @@ They are created from the blueprint of the bank form.
 
 This is OOPS. But, how it's useful for devs in real life?
 
-- Reusability of code
-  
-    If you create a User class once, you can make thousands of user objects without rewriting the same logic again and again. In big projects, this saves insane amounts of time.
+i. Without OOP Concepts, code for big projects becomes messy and fucking hell to maintain.
+   But, if we use OOP, the code is organized, and easier to maintain.
 
-- Makes debugging easier
+ii. Makes team-work easier. Each dev can work on a different class.
+    It prevents devs stepping on each other's toes.
 
-    If something breaks, you will know exactly where to look because the code's well organized with OOPS.
+iii. Debigging becomes easier as the code is organized.
 
-- Makes team work effective
+iv. Helps the code to be long-term maintainable.
+    When the application grows, new features should be addes.
+    With OOP, it becomes easier to add new classes without breaking the code.
 
-    In professional dev teams, different people work on different classes without stepping on each other's toes.
-
-In short, OOPS gives us clean structure, reusability, scalability, and maintainability.
-These are crucial in real-world applications like Web apps, Banking and Enterprise Systems, etc.
-
-NOTE: We, people, pronounce it as OOPS, but it's OOP.
-It became common among people pronouncing it as OOPS.
-For example, people say "ATM Machine", which is wrong, but common.
-So, just know the right thing, that's all.
+NOTE: Most of the people pronounce OOP as OOPS just because its easy.
+But it's not correct, just like telling ATM machine.
+We should know the difference, that's all.

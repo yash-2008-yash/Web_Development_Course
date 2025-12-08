@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getters and Setters</title>
+</head>
+
+<body>
+    <script>
+        class Person {
+            constructor(firstName, lastName, age) {
+                this.firstName = firstName
+                this.lastName = lastName
+                this.age = age
+            }
+
+            set firstName(newFirstName) {
+                if (typeof (newFirstName) === "string" && newFirstName.length > 0) {
+                    this._firstName = newFirstName
+                } else {
+                    console.error("First name must be a non-empty string.")
+                }
+            }
+
+            set lastName(newLastName) {
+                if (typeof (newLastName) === "string" && newLastName.length > 0) {
+                    this._lastName = newLastName
+                } else {
+                    console.error("Last name must be a non-empty string.")
+                }
+            }
+
+            set age(newAge) {
+                if (typeof (newAge) === "number" && newAge >= 0) {
+                    this._age = newAge
+                } else {
+                    console.error("Age must be a non-negative number.")
+                }
+            }
+
+            get firstName() {
+                return this._firstName
+            }
+
+            get lastName() {
+                return this._lastName
+            }
+
+            get age() {
+                return this._age
+            }
+        }
+
+        let a = prompt("enter first name")
+        let b = prompt("enter last name")
+        let c = parseInt(prompt("enter your age"))
+        let new_person = new Person(a, b, c)
+
+        console.log("First name:", new_person.firstName)
+        console.log("Last name:", new_person.lastName)
+        console.log("Age:", new_person.age)
+    </script>
+</body>
+
+</html>

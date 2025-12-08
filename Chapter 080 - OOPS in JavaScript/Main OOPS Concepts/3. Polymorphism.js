@@ -30,13 +30,9 @@ class Targaryen extends Noble_House {
     }
 }
 
-let Ned_Stark = new Stark()
-let Tywin_Lannister = new Lannister()
-let Daenerys_Targaryen = new Stark()
-
-Ned_Stark.attack()
-Tywin_Lannister.attack()
-Daenerys_Targaryen.attack()
+new Stark().attack()
+new Lannister().attack()
+new Targaryen().attack()
 
 // Every house has the method 'attack()', but each of them has different properties.
 // This is how Polymorphism works in JavaScript.
