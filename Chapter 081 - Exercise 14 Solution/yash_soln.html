@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 14</title>
+    <link rel="stylesheet" href="style78.css">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+    body {
+        background-color: black;
+        color: rgb(0, 255, 0);
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div id="message1"></div>
+        <div id="message2"></div>
+        <div id="message3"></div>
+        <div id="message4"></div>
+        <div id="message5"></div>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        let message1 = document.getElementById("message1")
+        let message2 = document.getElementById("message2")
+        let message3 = document.getElementById("message3")
+        let message4 = document.getElementById("message4")
+        let message5 = document.getElementById("message5")
+        let result = document.getElementById("result")
+
+        let delay1 = Math.floor(Math.random() * (7000 - 1000 + 1)) + 1000
+        let delay2 = Math.floor(Math.random() * (7000 - 1000 + 1)) + 1000
+        let delay3 = Math.floor(Math.random() * (7000 - 1000 + 1)) + 1000
+        let delay4 = Math.floor(Math.random() * (7000 - 1000 + 1)) + 1000
+        let delay5 = Math.floor(Math.random() * (7000 - 1000 + 1)) + 1000
+
+        function Blink(element, text, delay) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    setTimeout(() => {
+                        element.textContent = `${text}`
+                    }, 100);
+
+                    setTimeout(() => {
+                        element.textContent = `${text}.`
+                    }, 300);
+
+                    setTimeout(() => {
+                        element.textContent = `${text}..`
+                    }, 600);
+
+                    setTimeout(() => {
+                        element.textContent = `${text}...`
+                        resolve()
+                    }, 900);
+                }, delay);
+            })
+        }
+
+        function endMessage() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    result.innerHTML = "HACKING COMPLETE."
+                    resolve()
+                }, 500);
+            })
+        }
+
+        async function HackingSimulation() {
+            try {
+                await Blink(message1, "Initializing Hacking", delay1)
+                await Blink(message2, "Reading all the files", delay2)
+                await Blink(message3, "Password encryption cracked", delay3)
+                await Blink(message4, "Sending all your files to the server", delay4)
+                await Blink(message5, "Cleaning up", delay5)
+                await endMessage()
+            }
+            catch (error) {
+                console.log(error)
+            }
+        }
+
+        HackingSimulation()
+    </script>
+</body>
+
+</html>
