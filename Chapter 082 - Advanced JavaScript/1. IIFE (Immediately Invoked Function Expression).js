@@ -29,4 +29,4 @@ HelloWorld();
 // Destructuring was introduced which extracts values from arrays/objects easily.
 // Promises were intoduced which made handling async tasks easier.
 // Default parameters were introduced which lets us set function defaults.
-// Many more features were added, this is just the core updates.
+// Many more features were added, these are just the core updates.

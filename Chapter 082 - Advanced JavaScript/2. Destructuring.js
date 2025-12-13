@@ -16,7 +16,7 @@ let [color_1, color_2, color_3] = colors
 
 // Done the job in one fucking line.
 
-// You can also particular elements in variables, and store the rest of them into an array.
+// You can also make particular elements get stored in variables, and store the rest of them into an array.
 
 let array = [12, 23, 34, 45, 56, 67, 78, 89, 90]
 
@@ -58,7 +58,7 @@ let { TOP1, TOP2, TOP3 } = top3Movies
 
 // Now, I want to store first key into a variable and rest of them in an object.
 
-let { TOP1: movie1, ...remaining } = top3Movies
+let { TOP1:movie1, ...remaining } = top3Movies
 
 console.log(movie1)     // The Shawshank Redemption
 console.log(remaining)  // { TOP2: 'The Godfather', TOP3: 'The Dark Knight' }

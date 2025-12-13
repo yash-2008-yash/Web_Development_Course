@@ -32,9 +32,9 @@ let b = 20
 
 // But in fucntions:
 
-sayHI()
+sayHello()
 
-function sayHI() {
+function sayHello() {
     console.log("Hello, World!")
 }
 
