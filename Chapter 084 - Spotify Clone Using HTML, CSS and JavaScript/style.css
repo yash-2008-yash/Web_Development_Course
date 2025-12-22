@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+:root {
+    --PlaylistButtonOpacity: 0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -131,11 +135,19 @@ body {
     color: rgb(199, 199, 199);
 }
 
+.card:hover {
+    --PlaylistButtonOpacity: 1;
+    cursor: pointer;
+    background-color: rgb(31, 31, 31);
+}
+
 .play {
     width: 40px;
     position: absolute;
     top: 165px;
     right: 15px;
+    opacity: var(--PlaylistButtonOpacity);
+    transition: all 0.5s ease-out;
 }
 
 .buttons :nth-child(1) {
@@ -154,7 +166,7 @@ body {
     border: none;
     background-color: white;
     color: black;
-    padding: 8px 30px;
+    padding: 8px 20px;
     border-radius: 25px;
 }
 
@@ -165,7 +177,7 @@ body {
 .playbar {
     position: fixed;
     bottom: 10px;
-    height: 35px;
+    height: 60px;
     width: 68vw;
     background-color: black;
     border-radius: 10px;
@@ -182,6 +194,22 @@ body {
     height: 300px;
     overflow: auto;
     margin: 10px 0px 10px 0;
+}
+
+.songInfo {
+    min-width: 200px;
+}
+
+.songDuration {
+    min-width: 100px;
+    margin-left: 50px;
+    margin-right: 10px;
+}
+
+.volumeBar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .songList ul {
@@ -234,6 +262,12 @@ body {
     transition: left 0.5s;
 }
 
+.durationAndVolume {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .abovebar {
     display: flex;
     justify-content: space-between;
@@ -273,11 +307,16 @@ body {
         width: 100vw;
     }
 
+    .playbarContainer {
+        display: flex;
+        justify-content: center;
+    }
+
     .playbar {
         position: fixed;
         bottom: 10px;
         height: 45px;
-        width: 80vw;
+        width: 85vw;
         background-color: #1f1f1f;
         border-radius: 10px;
         padding: 10px 20px 12px 12px;
@@ -286,7 +325,7 @@ body {
 
     .seekbar {
         height: 6px;
-        width: 80vw;
+        width: 85vw;
         border: 2px solid rgb(110, 110, 110);
         background-color: rgb(110, 110, 110);
         position: absolute;
@@ -316,5 +355,39 @@ body {
 
     .card_container {
         justify-content: center;
+    }
+}
+
+@media (max-width: 685px) {
+    .playbar {
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .songInfo {
+        font-size: 23px;
+    }
+
+    .abovebar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .durationAndVolume {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .songDuration {
+        text-align: center;
+        width: 100%;
+        padding-right: 55px;
     }
 }

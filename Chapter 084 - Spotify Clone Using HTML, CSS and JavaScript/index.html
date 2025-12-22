@@ -64,7 +64,8 @@
             <div class="SpotifyPlaylists">
                 <h1>Spotify Playlists</h1>
                 <div class="card_container">
-                    <div class="card">
+
+                    <!-- <div data-folder="new" class="card">
                         <div class="play">
                             <img src="SVG/Green Play Button.svg" width="16px" alt="Play Button">
                         </div>
@@ -72,24 +73,41 @@
                         <h2>Happy Hits!</h2>
                         <p class="font">Hits to boost your mood and fill you with happiness!</p>
                     </div>
-                    <div class="card">
+
+                    <div data-folder="Starboy(2016)" class="card">
+                        <div class="play">
+                            <img src="SVG/Green Play Button.svg" width="16px" alt="Play Button">
+                        </div>
                         <img src="Card.jpg" alt="Card">
                         <h2>Happy Hits!</h2>
                         <p class="font">Hits to boost your mood and fill you with happiness!</p>
-                    </div>
+                    </div> -->
+
                 </div>
-                <div class="playbar">
-                    <div class="seekbar">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="abovebar">
-                        <div class="songInfo"></div>
-                        <div class="songButtons">
-                            <img id="previous" src="SVG/Previous Song.svg" class="invert" alt="Previous Song Button">
-                            <img id="play" src="SVG/Play Song.svg" class="invert" alt="Play Button">
-                            <img id="next" src="SVG/Next Song.svg" class="invert" alt="Next Song Button">
+
+                <div class="playbarContainer">
+                    <div class="playbar">
+                        <div class="seekbar">
+                            <div class="circle"></div>
                         </div>
-                        <div class="songDuration"></div>
+                        <div class="abovebar">
+                            <div class="songInfo"></div>
+                            <div class="songButtons">
+                                <img id="previous" src="SVG/Previous Song.svg" class="invert" width="30"
+                                    alt="Previous Song Button">
+                                <img id="play" src="SVG/Play Song.svg" class="invert" width="30" alt="Play Button">
+                                <img id="next" src="SVG/Next Song.svg" class="invert" width="30" alt="Next Song Button">
+                            </div>
+                            <div class="durationAndVolume">
+                                <div class="songDuration"></div>
+                                <div class="volumeBar">
+                                    <img src="SVG/Volume.svg" width="30" class="invert" alt="Volume Icon">
+                                    <div class="volumeRange">
+                                        <input type="range" name="volumeRange" id="volumeRange">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
