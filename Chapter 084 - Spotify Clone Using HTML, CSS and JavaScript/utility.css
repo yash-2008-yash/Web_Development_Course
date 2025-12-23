@@ -4,19 +4,6 @@
     display: flex;
 }
 
-.justify {
-    justify-content: center;
-}
-
-.items-center {
-    align-items: center;
-}
-
-.border {
-    border: 2px solid red;
-    margin: 3px;
-}
-
 .bg_black {
     background-color: black;
     color: white;
@@ -27,6 +14,7 @@
 }
 
 .invert {
+    /* For making black SVG as white SVG */
     filter: invert(1);
 }
 
@@ -44,10 +32,10 @@
 
 .font {
     font-family: "Plus Jakarta Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
 }
+
+/* webkit Customizations */
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -60,4 +48,29 @@
 
 ::-webkit-scrollbar-track {
     background-color: #222;
+}
+
+.volumeRange input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 90px;
+    height: 15px;
+    background: #3a3a3a;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+}
+
+.volumeRange input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    background: #1db954;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.volumeRange input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.5);
 }
