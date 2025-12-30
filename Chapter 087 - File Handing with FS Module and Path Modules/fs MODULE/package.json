@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "name": "chapter-087---file-handing-with-fs-module-and-path-modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
