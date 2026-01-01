@@ -1,10 +1,10 @@
 import fs from "fs"
 
-fs.readFile("sample.txt", (error, data) => {
-    console.log(`Error: ${error}`)
-    console.log(`Data: ${data}`)
-
-    console.log(data) // If you try this, you will get the data as buffer. You have to use toString().
+fs.readFile("fs MODULE/sample.txt", "utf-8", (error, data) => {
+    if (error) {
+        console.error(`${error}`)
+        return;
+    }
     console.log(data.toString())
 })
 
