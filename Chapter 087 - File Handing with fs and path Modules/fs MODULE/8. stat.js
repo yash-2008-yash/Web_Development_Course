@@ -10,3 +10,5 @@ fs.stat("fs MODULE/sample.txt", (error, stat) => {
     console.log(`File was created on ${stat.birthtime}`) // stat.birthtime returns the date of creation
     console.log(`File was last modified on ${stat.mtime}`) // stat.mtime returns the date of last modification
 })
+
+// stat() provides useful information about the given file.

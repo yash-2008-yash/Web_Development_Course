@@ -18,7 +18,7 @@
 
 import path from "path"
 
-const fileLocation = "Web Development Course/Chapter 087 - File Handing with fs and path Modules/path MODULE/file.txt"
+const fileLocation = "path MODULE/file.txt"
 const folder = path.dirname(fileLocation)
 console.log(folder)
 

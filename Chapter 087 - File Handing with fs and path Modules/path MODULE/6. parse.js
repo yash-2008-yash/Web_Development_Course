@@ -2,14 +2,14 @@
 
 import path from "path"
 
-console.log(path.parse("path MODULE/6. parse.js"))
+console.log(path.parse("path MODULE/file.txt"))
 
 // {
 //   root: '',
 //   dir: 'path MODULE',
-//   base: '6. parse.js',
-//   ext: '.js',
-//   name: '6. parse'
+//   base: 'file.txt',
+//   ext: '.txt',
+//   name: 'file'
 // }
 
 // root - The Starting point of the file path
@@ -21,7 +21,7 @@ console.log(path.parse("path MODULE/6. parse.js"))
 // Real-world usage: To create a duplicate file with same name with slight changes.
 
 const file = "document.pdf"
-const { dir, name, ext } = path.parse(file)
+const { name, ext } = path.parse(file)
 const newFile = `${name}(1)${ext}`
 
-console.log(newFile)
+console.log(newFile) // document(1).pdf

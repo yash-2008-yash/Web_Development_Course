@@ -5,10 +5,10 @@ fs.readFile("fs MODULE/sample.txt", "utf-8", (error, data) => {
         console.error(`${error}`)
         return;
     }
-    console.log(data.toString())
+    console.log(data)
 })
 
-// readFile is an asynchronous Node.js function used to read the contents of a file without blocking the program.
+// readFile is an asynchronous Node.js function used to read the contents of a file without blocking the execution of the program.
 // It returns the data via a callback or Promise.
 
 // SYNTAX: fs.readFile(path, options?, callback)
@@ -18,7 +18,7 @@ fs.readFile("fs MODULE/sample.txt", "utf-8", (error, data) => {
 // callback	→ Runs after the file operation completes
 
 // EXAMPLE:
-// fs.readFile("sampl.txt", "utf8", (error, data) => {
+// fs.readFile("fs MODULE/sample.txt", "utf8", (error, data) => {
 //     if (error) {
 //         console.error(error.message)
 //         return;
