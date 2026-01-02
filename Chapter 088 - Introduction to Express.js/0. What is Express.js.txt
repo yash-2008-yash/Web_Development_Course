@@ -1,0 +1,7 @@
+Express.js is a web framework for Node.js.
+It simplifies tasks like building servers, APIs, and backend applications by providing clean tools for handling routes, requests, responses, and middleware.
+
+Developers wanted to use JS to make servers in the backend.
+So, they introduced Node.js to do that.
+But, using Node.js to make backend servers, it became too much time-consuming.
+Thats's why Developers introduced Express.js to do what Node.js did, in less code.
