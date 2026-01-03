@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST Request Demo</title>
+</head>
+
+<body>
+    <script>
+        async function testingPOST() {
+            let a = await fetch("/", { method: "POST" })
+            let b = await a.text()
+            console.log(b) // This will print "This is a POST request!" in the console
+        }
+        testingPOST()
+
+        async function testingPUT() {
+            let a = await fetch("/", { method: "PUT" })
+            let b = await a.text()
+            console.log(b) // This will print "This is a PUT request!" in the console
+        }
+        testingPUT()
+    </script>
+</body>
+
+</html>
