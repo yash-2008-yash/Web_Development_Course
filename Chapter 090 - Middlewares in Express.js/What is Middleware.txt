@@ -1,0 +1,28 @@
+Middleware is a function that is present between a user’s request and the final response in a server application.
+
+In Express.js, middleware can:
+
+- read or modify the request
+- decide whether the request should continue
+- stop it and send a response
+- or pass control to the next step
+
+A request doesn’t go straight to the page.
+It passes through checkpoints (middleware).
+Each checkpoint can inspect, allow, block, or change it.
+
+function middleware(req, res, next) {
+    console.log("Request received")
+    next() // This means "move to the next step"
+}
+
+If next() is called, request continues. If not, request stops there.
+
+REAL-WORLD USES:
+
+- Login (or) Authentication checks
+- Logging requests
+- Validating form data
+- Blocking unauthorized users
+
+In simple terms, middleware controls what happens to a request before it reaches its final destination.
