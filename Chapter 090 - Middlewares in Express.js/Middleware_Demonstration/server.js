@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, "public"))) // To give users the acc
 
 // This is a middleware
 function checkLogin(req, res, next) {
-    const loggedIn = true
+    const loggedIn = false
 
     if (!loggedIn) {
         return res.sendFile(path.join(__dirname, "noLogin.html"))
