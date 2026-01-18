@@ -1,0 +1,7 @@
+Bootstrap CSS is a popular front-end framework used to build responsive, mobile-first websites quickly and efficiently.
+It provides ready-made CSS classes for layouts, buttons, forms, navigation bars, and more—so you don’t style everything from scratch.
+Bootstrap uses a grid system that automatically adapts designs to different screen sizes.
+In practice, it helps developers focus on functionality while maintaining a clean, professional UI.
+
+To get started with Bootstrap CSS, visit this page:
+https://getbootstrap.com/docs/5.3/getting-started/introduction/

@@ -1,30 +1,35 @@
 import fs from "fs"
 import path from "path"
 
-const baseDir = "/home/yashwanth-m/Files/Web Development Course/Chapter 091 - Exercise 15 (Clear the Clutter)"
+const directory = "/home/yashwanth-m/Files/Web Development Course/Chapter 091 - Exercise 15 (Clear the Clutter)"
 
-fs.readdir(baseDir, (err, files) => {
-    if (err) {
-        console.error(err)
-        return
+fs.readdir(directory, (error, files) => {
+    if (error) {
+        console.log(`${error}`)
+        return;
     }
 
     files.forEach(file => {
-        const ext = path.extname(file)
-        if (!ext) return   // skip files without extension
+        const extension = path.extname(file)
 
-        const folderName = ext.slice(1)
-        const folderPath = path.join(baseDir, folderName)
+        if (!extension) {
+            return;
+        }
+
+        const folderName = extension.slice(1)
+        const folderPath = path.join(directory, folderName)
 
         if (!fs.existsSync(folderPath)) {
             fs.mkdirSync(folderPath)
         }
 
-        const source = path.join(baseDir, file)
+        const source = path.join(directory, file)
         const destination = path.join(folderPath, file)
 
-        fs.rename(source, destination, err => {
-            if (err) console.error(err)
+        fs.rename(source, destination, error => {
+            if (error) {
+                console.error(`${error}`)
+            }
         })
     })
 })
