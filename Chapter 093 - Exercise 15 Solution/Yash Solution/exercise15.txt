@@ -1,0 +1,20 @@
+You have to write a Node.js program to clear the clutter inside a directory.
+That means the program should organize the contents of that directory into different folders.
+
+For example, imagine you have these files:
+
+background.jpg
+certificate.pdf
+cover.jpg
+document.pdf
+files.zip
+logo.png
+
+This files should become organized like:
+
+Inside the folder 'pdf', document.pdf and certificate.pdf should be stored.
+Inside the folder 'jpg', background.jpg and cover.jpg should be stored.
+Inside the folder 'zip', files.zip should be stored.
+Inside the folder 'png', logo.png should be stored.
+
+The JS program should do all these tasks. That's the exercise problem.
