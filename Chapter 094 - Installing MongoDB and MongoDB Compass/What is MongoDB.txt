@@ -1,12 +1,12 @@
 What exactly is MongoDB?
 
-NoSQL like mySQL, Oracle, PostgreSQL store data in a fixed structure.
-SQL like MongoDB, Firebase, Cassandra store data in a non-fixed structure.
+SQL like mySQL, Oracle, PostgreSQL store data in a fixed structure.
+NoSQL like MongoDB, Firebase, Cassandra store data in a non-fixed structure.
 
 MongoDB is used in web development because it is built for this shit.
-NoSQL wants our app to adapt to its storing structure with rigid rules.
-But, SQL like MongoDB makes the storing structure adapt to our app.
+SQL wants our app to adapt to its storing structure with rigid rules.
+But, NoSQL like MongoDB makes the storing structure adapt to our app.
 
 MongoDB is best for fast-evolving applications, which required changes every now and then.
 
-But for heavily secure systems like banking systems, money transactions, NoSQL is prefered because of it's fixed data storing structure.
+But for heavily secure systems like banking systems, money transactions, SQL is prefered because of it's fixed data storing structure.
