@@ -1,7 +1,7 @@
 use("CRUD_Database")
 
 // READ Operations in MongoDB
-// It means inserting new documents into a collection.
+// It means reading(accessing) documents from a collection.
 
 // find() - Gets us all the documents
 db.Operations.find().pretty() // pretty() makes the data readable
@@ -57,3 +57,7 @@ db.Operations.find({
 
 db.movies.find({ oscars: { $exists: true } })
 // This returns the documents which have the field "oscars"
+
+db.movies.find({ releasedYear: { $type: "number" } })
+// This returns the documents which have the data type of "releasedYear" as "number"
+// Obviously, the year would be a "number". It's just an example, so chill.
