@@ -23,13 +23,12 @@ db.Operations.deleteMany(
   { imdbRating: { $lt: 7.0 } } // This deletes all the documents which has imdbRating less than 7.0
 )
 
-
 // deleteMany() - Deletes all the documents from a collection
 // This method should be used with caution.
-// db.Operations.deleteMany({})
+db.Operations.deleteMany({})
 
 // drop() - This deletes the collection itself
-// db.Operations.drop()
+db.Operations.drop()
 
 // dropDatabase() - This deleted the whole database itself
-// db.dropDatabase()
+db.dropDatabase()

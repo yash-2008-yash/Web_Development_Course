@@ -21,7 +21,6 @@ db.Operations.countDocuments({ director: "Christopher Nolan" })
 // Used to compare multiple values
 
 // $eq - equal
-// $eq - equal to
 // $ne - not equal
 // $gt - greater than
 // $gte - greater than or equal
@@ -37,16 +36,16 @@ db.Operations.find({ releasedYear: { $in: [1994] } })
 // This returns the documents which have released in the year 1994
 
 // ----- 2. Logical Operators -----
-// Used to combine conditions
+// Used to combine multiple conditions
 
 // $and - all conditions should be true
 // $or - any one condition must be true
 // $not - negates(reverses) the condition
-// $nor - none of the conditions true
+// $nor - none of the conditions are true
 
-db.Operations.find({
-  genre: { $not: { $in: ["Drama"] } }
-})
+db.Operations.find(
+  { genre: { $not: { $in: ["Drama"] } } }
+)
 // This returns the documents which don't belong to genre "Drama"
 
 // ----- 3. Element Operators -----
@@ -55,9 +54,9 @@ db.Operations.find({
 // $exists → field exists or not
 // $type → field data type
 
-db.movies.find({ oscars: { $exists: true } })
+db.Operations.find({ oscars: { $exists: true } })
 // This returns the documents which have the field "oscars"
 
-db.movies.find({ releasedYear: { $type: "number" } })
+db.Operations.find({ releasedYear: { $type: "number" } })
 // This returns the documents which have the data type of "releasedYear" as "number"
 // Obviously, the year would be a "number". It's just an example, so chill.
