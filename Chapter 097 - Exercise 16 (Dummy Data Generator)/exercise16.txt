@@ -1,0 +1,19 @@
+EXERCISE 16
+
+Generate dummy data in the given format in a collection called 'employees' in a database called 'company'
+
+FORMAT:
+{
+  employeeName : "Yashwanth",
+  salary : 90000,
+  language : "JavaScript",
+  city : "Bangalore",
+  isManager : true
+}
+
+Create an Express.js app with Mongoose to achieve this.
+Generate 10 such records when a button called 'Generate data' is pressed.
+Everytime the button is clicked, the collection should be cleared and new data should be added.
+
+For dummy data generation, use an array of randoms to select one.
+But, for 'isManager', generate a random number and keep 50/50 probability of getting true/false.
