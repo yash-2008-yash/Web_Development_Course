@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 16</title>
+
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 50px 0 0 0;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 7px;
+      background-color: blueviolet;
+      color: white;
+      font-weight: bolder;
+      font-size: 21px;
+    }
+
+    .dataButton {
+      display: flex;
+      justify-content: center;
+    }
+
+    .ack {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+      font-size: 20px;
+    }
+
+    button:hover {
+      background-color: rebeccapurple;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Exercise 16 - Dummy Data Generator</h1>
+
+  <div class="dataButton">
+    <button type="button">Generate data</button>
+  </div>
+
+  <div class="ack"></div>
+
+  <script>
+    const button = document.querySelector('button');
+    const acknowledgement = document.querySelector('.ack');
+
+    button.addEventListener('click', async () => {
+      acknowledgement.textContent = 'Generating data...';
+
+      try {
+        const response = await fetch('/generate-data')
+        const data = await response.json()
+
+        acknowledgement.textContent = 'Created 10 documents.';
+      } catch (error) {
+        acknowledgement.textContent = 'Failed to generate data. Try again.';
+        console.error(error);
+      }
+    });
+  </script>
+</body>
+
+</html>
