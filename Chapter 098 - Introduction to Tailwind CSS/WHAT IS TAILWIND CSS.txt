@@ -1,0 +1,44 @@
+Tailwind CSS is a utility-first CSS framework.
+
+Basically, by using it, we can entirely skip writing CSS.
+We can use built-in CSS classes and style elements.
+
+Let me give a simple example:
+(CREATE A TEXT WITH BG RED AND COLOR WHITE)
+
+-------------------- WITHOUT TAILWIND CSS --------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example</title>
+  <style>
+    .text {
+      background-color: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="text">
+    <h1>HELLO</h1>
+  </div>
+</body>
+</html>
+
+-------------------- WITH TAILWIND CSS --------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example</title>
+  <link rel="stylesheet" href="src/output.css">
+</head>
+<body>
+  <div class="bg-red-500 text-white">
+    <h1>HELLO</h1>
+  </div>
+</body>
+</html>
