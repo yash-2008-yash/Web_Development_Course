@@ -1,0 +1,6 @@
+EXERCISE 17
+
+Design a layout similar to the given file 'layout.png'
+Complete this exercise using Tailwind CSS
+
+Use node.js and install Tailwind CSS
