@@ -9,50 +9,82 @@
 </head>
 
 <body class="bg-black text-white">
-  <div class="container flex mx-auto min-h-screen">
+  <div class="container flex mx-auto h-screen overflow-x-hidden">
 
     <!-- -------------------------- FIRST SECTION ----------------------------------- -->
-    <div class="first w-fit">
+    <div class="first md:w-64 shrink-0 sticky top-0 h-screen overflow-y-auto">
 
       <!-- X Logo Section -->
       <div class="logo m-3.5"><img src="svg/x_logo.svg" alt=""></div>
 
       <!-- Sidebar -->
-      <ul class="flex flex-col gap-5 ml-5 mt-6 mr-30">
-        <li class="flex items-center gap-3.5 text-xl font-extrabold"><img src="svg/home.svg" alt="">Home</li>
-        <li class="flex items-center gap-3.5 text-xl"><img src="svg/explore.svg" alt="">Explore</li>
-        <li class="flex items-center gap-3.5 text-xl"><img src="svg/notifications.svg" alt="">Notifications</li>
-        <li class="flex items-center gap-3.5 text-xl"><img src="svg/follow.svg" alt="">Follow</li>
-        <li class="flex items-center gap-3.5 text-xl"><img src="svg/chat.svg" alt="">Chat</li>
-        <li class="flex items-center gap-3.5 text-xl"><img src="svg/grok.svg" alt="">Grok</li>
-        <li class="flex items-center gap-3.5 text-xl"><img src="svg/profile.svg" alt="">Profile</li>
-        <li class="flex items-center gap-3.5 text-xl"><img src="svg/more.svg" alt="">More</li>
+      <ul class="flex flex-col gap-5 ml-5 mt-6 mr-8">
+        <li class="flex items-center gap-3.5 text-xl font-extrabold cursor-pointer">
+          <img src="svg/home.svg" alt="">
+          <p class="hidden md:block">Home</p>
+        </li>
+
+        <li class="flex items-center gap-3.5 text-xl hover:text-gray-600 transition delay-75 duration-350 ease-in-out cursor-pointer">
+          <img src="svg/explore.svg" alt="">
+          <p class="hidden md:block">Explore</p>
+        </li>
+
+        <li class="flex items-center gap-3.5 text-xl hover:text-gray-600 transition delay-75 duration-350 ease-in-out cursor-pointer">
+          <img src="svg/notifications.svg" alt="">
+          <p class="hidden md:block">Notifications</p>
+        </li>
+
+        <li class="flex items-center gap-3.5 text-xl hover:text-gray-600 transition delay-75 duration-350 ease-in-out cursor-pointer">
+          <img src="svg/follow.svg" alt="">
+          <p class="hidden md:block">Follow</p>
+        </li>
+
+        <li class="flex items-center gap-3.5 text-xl hover:text-gray-600 transition delay-75 duration-350 ease-in-out cursor-pointer">
+          <img src="svg/chat.svg" alt="">
+          <p class="hidden md:block">Chat</p>
+        </li>
+
+        <li class="flex items-center gap-3.5 text-xl hover:text-gray-600 transition delay-75 duration-350 ease-in-out cursor-pointer">
+          <img src="svg/grok.svg" alt="">
+          <p class="hidden md:block">Grok</p>
+        </li>
+
+        <li class="flex items-center gap-3.5 text-xl hover:text-gray-600 transition delay-75 duration-350 ease-in-out cursor-pointer">
+          <img src="svg/profile.svg" alt="">
+          <p class="hidden md:block">Profile</p>
+        </li>
+
+        <li class="flex items-center gap-3.5 text-xl hover:text-gray-600 transition delay-75 duration-350 ease-in-out cursor-pointer">
+          <img src="svg/more.svg" alt="">
+          <p class="hidden md:block">More</p>
+        </li>
       </ul>
 
       <!-- POST Button -->
-      <div class="p-3.5 mt-5 ml-2 max-w-56 text-center font-bold rounded-full bg-white text-gray-900">Post</div>
+      <div class="p-3.5 mt-5 ml-2 max-w-56 hidden md:block text-center font-bold rounded-full bg-white text-gray-900 transition delay-75 duration-350 ease-in-out hover:bg-gray-900 hover:text-white">Post</div>
 
       <!-- PROFILE Section -->
-      <div class="profile_icon flex gap-4 mt-17">
+      <div class="profile_icon flex gap-1 ml-5 mt-17">
         <img src="img/profile_picture.jpg" class="w-10 h-10 rounded-full" alt="">
 
-        <div class="text_content">
+        <div class="text_content hidden md:block">
           <h1 class="font-extrabold">Yashwanth M</h1>
           <p class="font-light text-gray-300/50">@Yashwanth_YCU</p>
         </div>
 
-        <img src="svg/three_dot.svg" class="pl-6" alt="">
-
+        <img src="svg/three_dot.svg"
+          class="ml-6 rounded-full hidden md:block transition delay-75 duration-350 ease-in-out hover:bg-gray-950"
+          alt="">
       </div>
     </div>
 
     <!-- -------------------------- SECOND SECTION ----------------------------------- -->
-    <div class="second w-full border-[0.1px] border-x-gray-600/90 border-y-black">
+    <div class="second w-full min-w-0 border-[0.1px] border-x-gray-600/90 border-y-black">
 
       <!-- Top Section -->
       <div class="flex justify-center items-center">
-        <div class="h-12 w-full flex justify-center items-center font-sm">For You</div>
-        <div class="h-12 w-full flex flex-col justify-center items-center relative">
+        <div class="h-12 w-full flex justify-center items-center font-sm transition delay-75 duration-350 ease-in-out hover:bg-gray-900">For You</div>
+        <div class="h-12 w-full flex flex-col justify-center items-center relative transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
           <div class="font-bold">Following</div>
           <div class="h-1 w-18 mt-1 rounded-full bg-sky-500 absolute bottom-0"></div>
         </div>
@@ -78,44 +110,235 @@
         <div class="h-[0.5px] w-10 border border-black"></div>
       </div>
 
-      <div class="flex justify-between items-center mb-3">
-        <div class="flex items-center gap-3 ml-17 mt-4">
-          <img src="svg/image.svg" alt="">
-          <img src="svg/gif.svg" alt="">
-          <img src="svg/grok_gray.svg" alt="">
-          <img src="svg/filter.svg" alt="">
-          <img src="svg/smile.svg" alt="">
-          <img src="svg/schedule.svg" alt="">
-          <img src="svg/location.svg" alt="">
-          <img src="svg/flag.svg" alt="">
+      <div class="items-center justify-between hidden md:block">
+        <div class="flex justify-between items-center mb-3">
+          <div class="flex items-center gap-3 ml-17 mt-4">
+            <img src="svg/image.svg" class="transition delay-75 duration-350 ease-in-out hover:bg-gray-900 rounded-lg" alt="">
+            <img src="svg/gif.svg" class="transition delay-75 duration-350 ease-in-out hover:bg-gray-900 rounded-lg" alt="">
+            <img src="svg/grok_gray.svg" class="transition delay-75 duration-350 ease-in-out hover:bg-gray-900 rounded-lg" alt="">
+            <img src="svg/filter.svg" class="transition delay-75 duration-350 ease-in-out hover:bg-gray-900 rounded-lg" alt="">
+            <img src="svg/smile.svg" class="transition delay-75 duration-350 ease-in-out hover:bg-gray-900 rounded-lg" alt="">
+            <img src="svg/schedule.svg" class="transition delay-75 duration-350 ease-in-out hover:bg-gray-900 rounded-lg" alt="">
+            <img src="svg/location.svg" class="transition delay-75 duration-350 ease-in-out hover:bg-gray-900 rounded-lg" alt="">
+            <img src="svg/flag.svg" class="transition delay-75 duration-350 ease-in-out hover:bg-gray-900 rounded-lg" alt="">
+          </div>
+          <div class="px-4 py-1.5 mt-2 mr-8 text-center font-bold rounded-full bg-white text-gray-900 transition delay-75 duration-350 ease-in-out hover:bg-gray-900 hover:text-white cursor-pointer">Post</div>
         </div>
-        <div class="px-4 py-1.5 mt-3 mr-8 text-center font-bold rounded-full bg-white text-gray-900">Post</div>
       </div>
 
       <!-- Separation Line -->
       <div class="h-[0.5px] w-full border border-gray-600"></div>
 
+      <!-- Post 1 Section -->
+      <div class="post1">
+        <div class="flex justify-between m-3">
+          <div class="flex gap-2 justify-center items-center">
+            <img src="img/interstellar.jpg" class="h-10 w-10 rounded-full" alt="">
+            <div class="flex-col md:flex">
+              <h1 class="font-bold">Nolan Archives</h1>
+              <h2 class="text-gray-600 text-sm">@NolanAnalyst · 1h</h2>
+            </div>
+          </div>
+          <div class="flex gap-2 justify-center items-center">
+            <img src="svg/grok_gray.svg" alt="">
+            <img src="svg/three_dot grey.svg" alt="">
+          </div>
+        </div>
+
+        <div class="px-10">
+          <h2 class="text-sm">
+            I've heard from a very reliable source that Anne Hathaway's performance in THE ODYSSEY is exceptional and could earn her an Oscar nomination.
+          </h2>
+
+          <h2 class="mt-3 text-sm">
+            The same source was also blown away by Lupita Nyong'o's performance.
+          </h2>
+        </div>
+
+        <div class="flex gap-1 rounded-lg h-70 w-fit mx-4 my-4 overflow-hidden">
+          <img src="img/anne-hathaway.jpg" class="w-1/2 rounded-l-lg object-cover" alt="">
+          <img src="img/lupita-nyong.jpg" class="w-1/2 rounded-r-lg object-cover" alt="">
+        </div>
+
+        <div class="flex justify-between items-center mx-7">
+          <div class="flex items-center gap-1 px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
+            <img src="svg/comments.svg" alt="">
+            <p class="text-sm font-bold text-gray-500">16</p>
+          </div>
+
+          <div class="flex items-center gap-1 px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
+            <img src="svg/retweet.svg" alt="">
+            <p class="text-sm font-bold text-gray-500">19</p>
+          </div>
+
+          <div class="flex items-center gap-1 px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
+            <img src="svg/like.svg" alt="">
+            <p class="text-sm font-bold text-gray-500">262</p>
+          </div>
+
+          <div class="flex items-center gap-1 px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
+            <img src="svg/analytics.svg" alt="">
+            <p class="text-sm font-bold text-gray-500">9.5K</p>
+          </div>
+
+          <div class="flex items-center gap-1">
+            <img src="svg/save.svg" class="px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900" alt="">
+            <img src="svg/share.svg" class="px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- Separation Line -->
+      <div class="h-[0.5px] w-full mt-5 border border-gray-600"></div>
+
+      <!-- Post 2 Section -->
+      <div class="post2">
+        <div class="flex justify-between m-3">
+          <div class="flex gap-2 justify-center items-center">
+            <img src="img/interstellar.jpg" class="h-10 w-10 rounded-full" alt="">
+            <div class="flex-col md:flex">
+              <h1 class="font-bold">Nolan Archives</h1>
+              <h2 class="text-gray-600 text-sm">@NolanAnalyst · 15h</h2>
+            </div>
+          </div>
+          <div class="flex gap-2 justify-center items-center">
+            <img src="svg/grok_gray.svg" alt="">
+            <img src="svg/three_dot grey.svg" alt="">
+          </div>
+        </div>
+
+        <div class="px-10">
+          <h2 class="text-sm">
+            Universal Studios Hollywood is celebrating THE ODYSSEY with two major attractions this summer:
+          </h2>
+
+          <h2 class="mt-3 text-sm">
+            • A life-sized Trojan ship from the film on the Studio Tour
+          </h2>
+
+          <h2 class="mt-3 text-sm">
+            • A 34-foot Trojan Horse displayed at CityWalk
+          </h2>
+        </div>
+
+        <div class="flex gap-1 rounded-lg h-70 w-3/4 mx-4 my-4 overflow-hidden">
+          <img src="img/matt_zendaya.jpg" class="w-1/2 rounded-l-lg object-cover" alt="">
+          <img src="img/mega_movie_summer.jpg" class="w-1/2 rounded-r-lg object-cover" alt="">
+        </div>
+
+        <div class="flex justify-between items-center mx-7">
+          <div class="flex items-center gap-1 px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
+            <img src="svg/comments.svg" alt="">
+            <p class="text-sm font-bold text-gray-500">1</p>
+          </div>
+
+          <div class="flex items-center gap-1 px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
+            <img src="svg/retweet.svg" alt="">
+            <p class="text-sm font-bold text-gray-500">14</p>
+          </div>
+
+          <div class="flex items-center gap-1 px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
+            <img src="svg/like.svg" alt="">
+            <p class="text-sm font-bold text-gray-500">229</p>
+          </div>
+
+          <div class="flex items-center gap-1 px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
+            <img src="svg/analytics.svg" alt="">
+            <p class="text-sm font-bold text-gray-500">9.6K</p>
+          </div>
+
+          <div class="flex items-center gap-1">
+            <img src="svg/save.svg" class="px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900" alt="">
+            <img src="svg/share.svg" class="px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- Separation Line -->
+      <div class="h-[0.5px] w-full mt-5 border border-gray-600"></div>
+
+      <!-- Post 3 Section -->
+      <div class="post3">
+        <div class="flex justify-between m-3">
+          <div class="flex gap-2 justify-center items-center">
+            <img src="img/interstellar.jpg" class="h-10 w-10 rounded-full" alt="">
+            <div class="flex-col md:flex">
+              <h1 class="font-bold">Nolan Archives</h1>
+              <h2 class="text-gray-600 text-sm">@NolanAnalyst · 16h</h2>
+            </div>
+          </div>
+          <div class="flex gap-2 justify-center items-center">
+            <img src="svg/grok_gray.svg" alt="">
+            <img src="svg/three_dot grey.svg" alt="">
+          </div>
+        </div>
+
+        <div class="px-10">
+          <h2 class="text-sm">
+            A Trojan Horse popcorn bucket and an IMAX film camera bucket are rumored to be coming for THE ODYSSEY.
+          </h2>
+        </div>
+
+        <div class="flex gap-1 rounded-lg h-full w-3/4 mx-4 my-4 overflow-hidden">
+          <img src="img/the_odyssey.jpg" class="w-full rounded-l-lg object-cover" alt="">
+        </div>
+
+        <div class="flex justify-between items-center mx-7">
+          <div class="flex items-center gap-1 px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
+            <img src="svg/comments.svg" alt="">
+            <p class="text-sm font-bold text-gray-500">9</p>
+          </div>
+
+          <div class="flex items-center gap-1 px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
+            <img src="svg/retweet.svg" alt="">
+            <p class="text-sm font-bold text-gray-500">33</p>
+          </div>
+
+          <div class="flex items-center gap-1 px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
+            <img src="svg/like.svg" alt="">
+            <p class="text-sm font-bold text-gray-500">478</p>
+          </div>
+
+          <div class="flex items-center gap-1 px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
+            <img src="svg/analytics.svg" alt="">
+            <p class="text-sm font-bold text-gray-500">16K</p>
+          </div>
+
+          <div class="flex items-center gap-1">
+            <img src="svg/save.svg" class="px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900" alt="">
+            <img src="svg/share.svg" class="px-3 py-1 rounded-full transition delay-75 duration-350 ease-in-out hover:bg-gray-900" alt="">
+          </div>
+        </div>
+      </div>
+
+      <!-- Separation Line -->
+      <div class="h-[0.5px] w-full mt-5 border border-gray-600"></div>
+
+      <div class="p-10 m-3 font-bold text-lg bg-gray-900 rounded-xl">
+        <h1>
+          IF YOU THOUGHT THIS WAS THE REAL TWITTER WEBSITE, YOU ARE A DUMBASS, LOL. THIS IS A UI CLONE OF TWITTER WEBISTE MADE BY <i class="font-light">YASHWANTH M</i>.
+        </h1>
+      </div>
+
     </div>
 
     <!-- -------------------------- THIRD SECTION ----------------------------------- -->
-    <div class="third w-fit flex flex-col">
+    <div class="third w-80 shrink-0 sticky top-0 h-screen overflow-y-auto hidden xl:block">
 
       <!-- Search Bar -->
       <div class="flex items-center ml-7 mt-3">
         <img src="svg/search.svg" class="relative z-10 -mr-7 pointer-events-none w-5 h-5" />
-        <input class="pl-9 pr-35 py-2.5 mr-10 text-sm rounded-full border border-gray-600 focus:outline-none"
-          placeholder="Search" />
+        <input class="pl-9 pr-5 py-2.5 mr-10 text-sm rounded-full border border-gray-600 focus:outline-none" placeholder="Search" />
       </div>
 
       <!-- 'Subsribe to Premium' Section -->
       <div class="flex flex-col gap-2 border border-gray-600/90 max-w-90 ml-5 mt-3 p-3.5 rounded-xl ">
-        <div class="flex items-center gap-3">
+        <div class="flex flex-col items-center gap-1">
           <h1 class="font-bold text-xl">Subscribe to Premium</h1>
-          <p class="bg-green-900 text-green-300 px-2 rounded-lg">50% off</p>
+          <p class="bg-green-900 text-green-300 rounded-lg p-1">50% off</p>
         </div>
         <p>Get rid of ads, see your analytics, boost your replies and unlock 20+ features.</p>
-        <div class="py-2 px-5 mt-3 w-fit text-center text-sm font-bold rounded-full bg-blue-500 text-white">Subscribe
-        </div>
+        <div class="py-2 px-5 mt-3 w-fit text-center text-sm font-bold rounded-full bg-blue-500 text-white transition delay-75 duration-350 ease-in-out hover:bg-blue-600 cursor-pointer">Subscribe</div>
       </div>
 
       <!-- 'Today's News' Section -->
@@ -125,7 +348,7 @@
           <img src="svg/close.svg" alt="">
         </div>
 
-        <div class="mt-5">
+        <div class="mt-1 p-3 rounded-sm transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
           <h1 class="font-bold text-base">Arsenal Chase Champions League Glory Against PSG in Budapest Final</h1>
           <div class="flex items-center mt-3">
             <img class="w-6 h-6 rounded-full ring-1 ring-white z-10" src="img/batman-pic.jpg" />
@@ -135,7 +358,7 @@
           </div>
         </div>
 
-        <div class="mt-5">
+        <div class="mt-1 p-3 rounded-sm transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
           <h1 class="font-bold text-base">Fabrizio Romano Reports Arne Slot Leaving Liverpool for Iraola</h1>
           <div class="flex items-center mt-3">
             <img class="w-6 h-6 rounded-full ring-1 ring-white z-10" src="img/spiderman-pic.jpg" />
@@ -145,7 +368,7 @@
           </div>
         </div>
 
-        <div class="mt-5">
+        <div class="mt-1 p-3 rounded-sm transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
           <h1 class="font-bold text-base">Rahul Gandhi Blasts Modi Government Over CUET Exam Glitch and Exam Chaos</h1>
           <div class="flex items-center mt-3">
             <img class="w-6 h-6 rounded-full ring-1 ring-white z-10" src="img/spiderman-pic.jpg" />
@@ -162,7 +385,7 @@
           <h1 class="font-bold text-xl">What's happening</h1>
         </div>
 
-        <div class="flex justify-between items-center mt-3">
+        <div class="flex justify-between items-center mt-0.5 p-3 rounded-sm transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
           <div>
             <p class="text-sm text-gray-500">Trending in India</p>
             <h1 class="font-bold">#SilencedNoMore</h1>
@@ -170,7 +393,7 @@
           <img src="svg/three_dot grey.svg" alt="">
         </div>
 
-        <div class="flex justify-between items-center mt-3">
+        <div class="flex justify-between items-center mt-0.5 p-3 rounded-sm transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
           <div>
             <p class="text-sm text-gray-500">Trending in India</p>
             <h1 class="font-bold">#GoaStatehoodDay</h1>
@@ -178,7 +401,7 @@
           <img src="svg/three_dot grey.svg" alt="">
         </div>
 
-        <div class="flex justify-between items-center mt-3">
+        <div class="flex justify-between items-center mt-0.5 p-3 rounded-sm transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
           <div>
             <p class="text-sm text-gray-500">Trending in India</p>
             <h1 class="font-bold">#RapidoRide</h1>
@@ -186,7 +409,7 @@
           <img src="svg/three_dot grey.svg" alt="">
         </div>
 
-        <div class="flex justify-between items-center mt-3">
+        <div class="flex justify-between items-center mt-0.5 p-3 rounded-sm transition delay-75 duration-350 ease-in-out hover:bg-gray-900">
           <div>
             <p class="text-sm text-gray-500">Sports · Trending</p>
             <h1 class="font-bold">Liverpool</h1>
@@ -194,7 +417,7 @@
           <img src="svg/three_dot grey.svg" alt="">
         </div>
 
-        <h1 class="font-light mt-4 text-blue-400">Show more</h1>
+        <h1 class="font-light mt-4 text-blue-400 hover:underline">Show more</h1>
       </div>
 
       <!-- 'Who to follow' Section -->
@@ -209,8 +432,7 @@
             <h1 class="font-bold">The Weeknd</h1>
             <p class="text-gray-500 text-sm">@abeltesfaye</p>
           </div>
-          <div class="px-5 py-1.5 ml-auto max-w-56 text-center text-sm font-bold rounded-full bg-white text-black">
-            Follow</div>
+          <div class="px-3 py-1.5 ml-auto max-w-56 text-center text-sm font-bold rounded-full bg-white text-black transition delay-75 duration-350 ease-in-out hover:bg-gray-900 hover:text-white cursor-pointer">Follow</div>
         </div>
 
         <div class="flex items-center mt-3">
@@ -219,8 +441,7 @@
             <h1 class="font-bold">Michael Jackson</h1>
             <p class="text-gray-500 text-sm">@michaeljackson</p>
           </div>
-          <div class="px-5 py-1.5 ml-auto max-w-56 text-center text-sm font-bold rounded-full bg-white text-black">
-            Follow</div>
+          <div class="px-3 py-1.5 ml-auto max-w-56 text-center text-sm font-bold rounded-full bg-white text-black transition delay-75 duration-350 ease-in-out hover:bg-gray-900 hover:text-white cursor-pointer">Follow</div>
         </div>
 
         <div class="flex items-center mt-3">
@@ -229,15 +450,14 @@
             <h1 class="font-bold">Christopher Nolan</h1>
             <p class="text-gray-500 text-sm">@christophernolan</p>
           </div>
-          <div class="px-5 py-1.5 ml-auto max-w-56 text-center text-sm font-bold rounded-full bg-white text-black">
-            Follow</div>
+          <div class="px-3 py-1.5 ml-auto max-w-56 text-center text-sm font-bold rounded-full bg-white text-black transition delay-75 duration-350 ease-in-out hover:bg-gray-900 hover:text-white cursor-pointer">Follow</div>
         </div>
 
-        <h1 class="font-light mt-4 text-blue-400">Show more</h1>
+        <h1 class="font-light mt-4 text-blue-400 hover:underline">Show more</h1>
       </div>
 
       <!-- Footer Section -->
-      <div class="gap-2 text-sm max-w-90 ml-5 mt-3 p-3.5 rounded-xl ">
+      <div class="gap-2 text-sm max-w-90 ml-5 mt-3 p-3.5 rounded-xl">
         <h1>Terms of Service | Privacy Policy | Cookie Policy | Accessibility | Ads info | More... © 2026 X Corp.</h1>
       </div>
 </body>
