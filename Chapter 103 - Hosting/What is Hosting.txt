@@ -1,0 +1,58 @@
+When you make a website or an application and run it in your computer,
+you are running it in 'localhost', which means you are running it locally.
+
+Only you can see that webiste/app.
+
+If you want the world to see it, you have to host it in the internet.
+For that, you need hosting. Simple as that.
+
+Basically, you upload all your files of the app to a powerful computer called 'server'.
+It runs 24x7, so your webiste is always live once it's hosted.
+
+---------------------------------------------------------------------------
+
+A real-world example:
+
+- You made a simple portfolio webiste with files index.html, style.css, script.js, profile.jpg, etc.
+- You host your website using some hosting service like Vercel, Hostinger, etc. and upload all the files.
+- Now, you get an IP address like 104.18.22.123 or something, which anyone can search and see your website.
+- You buy a domain for your webiste. Ex: myportfolio.in, myfirstwebsite.com, etc.
+- Now, users don't have to type IP addresses to see your website, they can just type in the domain name.
+- DNS (Domain Name System) translates that domain name into IP address so that the browser can open it.
+- You connect your domain to hosting, so now internet knows that myportfolio.in means your website in Hosting Server.
+- Now, any user can visit your website.
+
+---------------------------------------------------------------------------
+
+Types of Hosting Services:
+
+1. Shared Hosting
+    - You share a server with hundreds of websites.
+    - It's the cheapest hosting service you can get.
+    - If one website consumes too much resources, your website may slow down.
+    - Perfect for small websites like personal websites, portfolios, etc.
+
+2. VPS Hosting (Virtual Private Server Hosting)
+    - You share a server with hundreds of websites, but you have separate resources reserved.
+    - Server resources are distributed separately to all websites.
+    - If one website consumes too much resources, it doesn't affect your website.
+    - It's expensive compared to shared hosting.
+
+3. Dedicated Hosting
+    - You have the whole server for yourself, no neighbors, no sharing.
+    - It's extremely expensive than shared and VPS hosting.
+    - Large applications like streaming services, high-traffic websites uses this hosting.
+
+4. Cloud Hosting
+    - The largest type of hosting service.
+    - In this, you don't have one server, you have multiple servers working together.
+    - Even if one server fails, other servers can handle it.
+    - It "auto scales" the number of servers based on the number of visitors.
+    - Huge companies like Netflix, Spotify, etc. uses this because managing millions of users with one server is impossible.
+
+---------------------------------------------------------------------------
+
+This is the basics of DevOps.
+Developers just write code. But, DevOps Engineers deploys it, monitors it, scales it, etc.
+
+DevOps is one of the crucial concepts to know in Full-Stack Development.
