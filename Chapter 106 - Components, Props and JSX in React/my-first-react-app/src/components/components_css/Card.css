@@ -1,0 +1,14 @@
+.card {
+  background-color: rgb(18, 0, 36);
+  color: white;
+  height: 50vh;
+  width: 25vw;
+  text-align: center;
+  margin: 40px 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
