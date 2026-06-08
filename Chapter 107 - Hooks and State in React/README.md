@@ -68,7 +68,7 @@ export default App
 
 Ever heard "Our brain fools us, sometimes." This is one of those "sometimes".
 
-**Yeah, I don't blame ya. Many begineers, even me, had the same doubt.**<br>
+**Yeah, I don't blame ya. Many beginners, even me, had the same doubt.**<br>
 When we run `App.jsx`, there is no error, but UI doesn't update.<br>
 So, our counter app won't update the count, no matter how mnay times you click.
 
