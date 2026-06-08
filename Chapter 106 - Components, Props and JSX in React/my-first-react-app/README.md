@@ -1,16 +1,41 @@
-# React + Vite
+# How to create a React app?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Step 1: Check whether Node.js is installed or not
+```bash
+node -v
+```
+Vite requires minumum Node.js version 18. If it's older, update it first.
 
-Currently, two official plugins are available:
+## Step 2: Run the Vite create command
+```bash
+npm create vite@latest
+```
+After this, it'll ask you some questions.<br>
+Like, what do you want to keep your app's name, which language, etc.<br>
+Now, it'll create a folder of your app.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Step 3: Navigate into your app folder
+```bash
+cd your-app-name
+```
 
-## React Compiler
+## Step 4: Install the dependencies
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Step 5: Start the dev server
+```bash
+npm run dev
+```
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Your app will be running at http://localhost:5173/. Open that in the browser.<br>
+**Congratulations!!! You just created an own React app of yours.**
+
+Inside your app folder, there will be a folder `src`.<br>
+A file will be there called `App.jsx`, this is your app.
+Inside `src`, create a folder `components` where you can create components.
+
+---
