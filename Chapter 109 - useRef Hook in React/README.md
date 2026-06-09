@@ -38,6 +38,29 @@ For example, `.focus()`, `.play()`, `.scrollIntoView()`, `.offsetWidth` doesn't 
 The browser has these methods but React doesn't.<br>
 To access those through React, you need `useRef`.
 
+Let's see an example using this `.scrollIntoView()`.
+```javascript
+import { useRef } from 'react'
+
+function App() {
+  const bottomRef = useRef(null)
+
+  function scrollToBottom() {
+    bottomRef.current.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  return (<>
+    <button onClick={scrollToBottom}>Scroll to bottom</button>
+
+    <div style={{ height: '1000px' }} />
+
+    <div ref={bottomRef}>You made it to the bottom!!!</div>
+  </>)
+}
+
+export default App;
+```
+
 ## The most important usage of `useRef`
 
 The most used feature of `useRef` isn't DOM manipulation.<br>
