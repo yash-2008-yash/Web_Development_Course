@@ -1,0 +1,11 @@
+EXERCISE 18
+
+Using an API, you have to display the data in the form of a card under a container.
+All the data points returned by the API should be converted into a card.
+
+Use this API: https://jsonplaceholder.typicode.com/posts
+
+HINT:
+- Create a state for the data fetched by the jsonplaceholder API.
+- Inside useEffect, use fetch() to populate that state.
+- Then, use map() to render the cards from that state.
