@@ -1,35 +1,27 @@
-import { useState } from 'react'
+import { useState } from "react"
 
 function App() {
-  const [clickMessage, setClickMessage] = useState("Touch me and you'll see who I am!")
-  const [mouseEnterMessage, setMouseEnterMessage] = useState("Don't bring your cursor towards me!")
-  const [key, setKey] = useState("")
-
-
-  const handleClick = () => {
-    setClickMessage("I am a button.")
-  }
-
-  const handleMouseEnter = () => {
-    setMouseEnterMessage("Get your fucking cursor out of me!")
-  }
+  const [text, setText] = useState("")
+  const [submitted, setSubmitted] = useState("")
 
   const handleKeyDown = (e) => {
-    setKey(e.key)
+    if (e.key === "Enter") {
+      setSubmitted(text)
+      setText("")
+    }
+
+    if (e.key === "Escape") {
+      setText("")
+    }
   }
+
   return (<>
-    {/* onClick EVENT */}
-    <button onClick={handleClick}><h1>{clickMessage}</h1></button>
-
-    <br /><br />
-
-    {/* onMouseEnter EVENT */}
-    <button onMouseEnter={handleMouseEnter}><h1>{mouseEnterMessage}</h1></button>
+    <h3>Press "Enter" to submit</h3>
+    <h3>Press "Esc" to clear</h3>
     
-    <br /><br />
+    <input type="text" value={text} onChange={(e) => setText(e.target.value)} onKeyDown={handleKeyDown} />
 
-    <input type="text" onKeyDown={handleKeyDown} />
-    <h2>You pressed: {key}</h2>
+    {submitted && <p>Submitted: {submitted}</p>}
   </>)
 }
 
