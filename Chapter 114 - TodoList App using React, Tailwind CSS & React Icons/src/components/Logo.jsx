@@ -1,10 +1,10 @@
-import logo from "../assets/app_logo.jpg";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 const Logo = () => {
   return (<>
     <div className="flex gap-1 items-center text-4xl m-2">
-      <img src={logo} alt="" />
-      <h1>yashlist.</h1>
+      <IoMdCheckmarkCircleOutline className="text-6xl text-green-500" />
+      <h1 className="font-light">yashlist.</h1>
     </div>
   </>)
 }
