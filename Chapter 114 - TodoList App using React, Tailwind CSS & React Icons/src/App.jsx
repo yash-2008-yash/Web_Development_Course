@@ -1,17 +1,76 @@
+import { useEffect, useState } from "react";
+
+// Imported Components
 import Logo from "./components/Logo"
 import SeparationLine from "./components/SeparationLine"
 
-// Icons
-import { CiEdit } from "react-icons/ci";
+// Imported React Icons from https://react-icons.github.io/react-icons
+import { MdEdit } from "react-icons/md";
 import { FaCheckCircle } from "react-icons/fa"
 import { MdRadioButtonUnchecked } from "react-icons/md";
 import { MdDeleteOutline } from "react-icons/md";
 
-// import { MdOutlineRadioButtonUnchecked } from "react-icons/md";
+// uuid npm package for unique IDs for each todo
+import { v4 as uuidv4 } from "uuid"
 
 import './index.css'
 
 function App() {
+
+  const [todos, setTodos] = useState(() => {
+    const todoString = localStorage.getItem("todos")
+    return todoString ? JSON.parse(todoString) : []
+  })
+
+  const [todo, setTodo] = useState("")
+  const [editID, setEditID] = useState(null)
+  const [showFinished, setShowFinished] = useState(true)
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos))
+  }, [todos])
+
+
+  const handleAdd = () => {
+    if (editID) {
+      setTodos(prev => prev.map(item =>
+        item.id === editID ? { ...item, todo } : item
+      ))
+      setEditID(null)
+    } else {
+      setTodos([...todos, { id: uuidv4(), todo, isCompleted: false }])
+    }
+    setTodo("")
+  }
+
+
+  const handleEdit = (id) => {
+    let t = todos.find(i => i.id === id)
+    setTodo(t.todo)
+    setEditID(id)
+  }
+
+
+  const handleDelete = (id) => {
+    let newTodos = todos.filter(item => item.id !== id)
+    setTodos(newTodos)
+  }
+
+
+  const handleChange = (e) => {
+    setTodo(e.target.value)
+  }
+
+
+  const handleCheck = (id) => {
+    setTodos(prev => prev.map(todo => todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo))
+  }
+
+
+  const toggleShowFinished = () => {
+    setShowFinished(!showFinished)
+  }
+
 
   return (<>
 
@@ -27,72 +86,60 @@ function App() {
     <SeparationLine className="mt-10" />
 
     {/* Container */}
-    <div className="rounded-lg min-h-[82vh] min-w-[70vw] m-auto mt-2">
+    <div className="rounded-lg min-h-[82vh] w-full max-w-[90vw] sm:max-w-[75vw] lg:max-w-[60vw] m-auto mt-5 px-2">
 
       {/* INPUT Container */}
-      <div className="border-x-2 border-green-500 rounded-md mx-4 flex flex-col gap-4 sm:flex-row md:gap-4 justify-center items-center min-h-[7vh] sm:max-w-[50vw] sm:m-auto my-5">
-        <input type="text" className="pl-5 focus:outline-none text-white" placeholder="enter a task." />
-        <button className="bg-blue-300 text-black text-lg font-bold rounded-md w-[80vw] sm:w-[30vh] min-w-20 px-2 py-0.5 sm:mr-5">+ add.</button>
+      <div className="border-x-2 border-green-500 rounded-md flex flex-col sm:flex-row gap-3 justify-center items-center min-h-[7vh] px-3 py-3 my-5">
+        <input type="text" onChange={handleChange} value={todo} placeholder="enter a task."
+          className="pl-3 focus:outline-none text-white bg-transparent w-full sm:flex-1" />
+        <button onClick={handleAdd} disabled={todo.length === 0}
+          className="bg-linear-to-br from-blue-400 to-blue-900 text-base sm:text-lg font-bold rounded-md w-full sm:w-auto px-4 py-1 sm:mr-3 whitespace-nowrap">
+          {editID ? "✓ save." : "+ add."}
+        </button>
       </div>
 
       {/* SHOW FINISHED Checkbox */}
-      <div className="flex justify-center items-center gap-2 mt-10">
-        <FaCheckCircle className="text-2xl" />
-        {/* <MdOutlineRadioButtonUnchecked className="text-2xl" /> */}
-        <p>show finished ones.</p>
-
-        {/* <input type="checkbox" className="appearance-none" name="showFinished" id="showFinished" />Show Finished tasks */}
+      <div className="main flex justify-center items-center gap-2 mt-4 cursor-pointer" onClick={toggleShowFinished}>
+        {(showFinished)
+          ? <FaCheckCircle className="text-3xl sm:text-4xl text-green-500" />
+          : <MdRadioButtonUnchecked className="text-3xl sm:text-4xl text-green-500" />
+        }
+        <p className="text-lg sm:text-xl">show finished.</p>
       </div>
 
-      <div className="taskContainer m-auto mt-5 max-w-[70vw] border-2 border-green-500 rounded-tl-3xl rounded-br-3xl">
+      {/* Task Container */}
+      <div className="taskContainer m-auto mt-5 min-h-[30vh] w-full border-2 border-green-500 rounded-tl-3xl rounded-br-3xl overflow-hidden">
 
-        <div className="task flex justify-around items-center my-2 p-3 min-w-[50vw]">
-          <div className="main flex items-center gap-3">
-            <MdRadioButtonUnchecked className="text-4xl text-green-500" />
-            <h1 className="text-3xl">Task 1</h1>
-          </div>
+        {todos.length === 0 &&
+          <div className="text-center text-lg sm:text-2xl text-gray-300 mt-20 px-4">no todos to display :(</div>
+        }
 
-          <div className="options flex items-center gap-10">
-            <CiEdit className="text-4xl" />
-            <MdDeleteOutline className="text-4xl" />
-          </div>
-        </div>
+        {todos.map(item => {
+          return (showFinished || !item.isCompleted) && (
+            <div key={item.id} className="task flex justify-between items-center my-2 p-3 w-full">
+              <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                <div className="flex items-center gap-2 sm:gap-3 shrink-0" onClick={() => handleCheck(item.id)}>
+                  {item.isCompleted
+                    ? <FaCheckCircle className="text-3xl sm:text-4xl text-green-500 cursor-pointer" />
+                    : <MdRadioButtonUnchecked className="text-3xl sm:text-4xl text-green-500 cursor-pointer" />
+                  }
+                </div>
 
-        <div className="task flex justify-around items-center my-2 p-3 min-w-[50vw]">
-          <div className="main flex items-center gap-3">
-            <MdRadioButtonUnchecked className="text-4xl text-green-500" />
-            <h1 className="text-3xl">Task 2</h1>
-          </div>
+                <h1 className={`${item.isCompleted ? "line-through" : ""} text-lg sm:text-2xl lg:text-3xl wrap-break-word min-w-0`}>{item.todo}</h1>
+              </div>
 
-          <div className="options flex items-center gap-10">
-            <CiEdit className="text-4xl" />
-            <MdDeleteOutline className="text-4xl" />
-          </div>
-        </div>
+              <div className="options flex items-center gap-2 sm:gap-5 shrink-0 ml-2">
+                <div className="bg-linear-to-br from-green-500 to-green-950 px-2 py-1 sm:px-3 rounded-lg cursor-pointer">
+                  <MdEdit className="text-2xl sm:text-4xl" onClick={(e) => { handleEdit(e, item.id) }} />
+                </div>
 
-        <div className="task flex justify-around items-center my-2 p-3 min-w-[50vw]">
-          <div className="main flex items-center gap-3">
-            <MdRadioButtonUnchecked className="text-4xl text-green-500" />
-            <h1 className="text-3xl">Task 3</h1>
-          </div>
-
-          <div className="options flex items-center gap-10">
-            <CiEdit className="text-4xl" />
-            <MdDeleteOutline className="text-4xl" />
-          </div>
-        </div>
-
-        <div className="task flex justify-around items-center my-2 p-3 min-w-[50vw]">
-          <div className="main flex items-center gap-3">
-            <MdRadioButtonUnchecked className="text-4xl text-green-500" />
-            <h1 className="text-3xl">Task 4</h1>
-          </div>
-
-          <div className="options flex items-center gap-10">
-            <CiEdit className="text-4xl" />
-            <MdDeleteOutline className="text-4xl" />
-          </div>
-        </div>
+                <div className="bg-linear-to-br from-green-500 to-green-950 px-2 py-1 sm:px-3 rounded-lg cursor-pointer">
+                  <MdDeleteOutline className="text-2xl sm:text-4xl" onClick={(e) => { handleDelete(e, item.id) }} />
+                </div>
+              </div>
+            </div>
+          )
+        })}
 
       </div>
 
