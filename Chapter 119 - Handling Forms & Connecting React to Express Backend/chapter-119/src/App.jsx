@@ -1,24 +1,22 @@
 import { useForm } from "react-hook-form"
 
 function App() {
-  const { register, handleSubmit, setError, watch, formState: { errors, isSubmitting, isSubmitSuccessful } } = useForm();
-
-  const fakeDelay = (delay) => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve()
-      }, delay * 1000)
-    })
-  }
+  const { register, handleSubmit, watch, formState: { errors, isSubmitting, isSubmitSuccessful } } = useForm();
 
   const onSubmit = async (data) => {
-    await fakeDelay(3)
 
-    if (data.username !== "yashwanth") {
-      setError("blocked", { message: "You don't have access to submit the form!" })
-    }
+    let formData = fetch(
+      "http://localhost:3000/",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      }
+    )
 
-    console.log(data)
+    let res = await formData.text
+
+    console.log(data, res)
   }
 
   return (<>
@@ -62,12 +60,6 @@ function App() {
 
       {isSubmitSuccessful &&
         <div className="text-green-400">Form submitted successfully!</div>
-      }
-
-      {errors.blocked &&
-        <div className="text-red-600">
-          WARNING: {errors.blocked.message}
-        </div>
       }
     </form>
   </>)

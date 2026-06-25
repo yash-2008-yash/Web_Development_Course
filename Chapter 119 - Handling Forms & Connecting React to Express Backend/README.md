@@ -315,3 +315,85 @@ Try to learn more about **React Hook Form** by clicking [here](https://react-hoo
 ---
 
 ## Connecting React to Express Backend
+
+Alright, we made a simple form which takes **username** and **password**.<br>
+Now, let's get the submitted data into the backend.<br>
+I mean, we didn't create a form just to display the data in the console, right?
+
+Create a folder called `backend` and make a file `server.js`.<br>
+This is to separate the frontend and backend part of our app.
+
+**NOTE:** The app is gonna be a **Express.js** app.
+
+`server.js`
+```javascript
+import express from "express"
+
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.post('/', (req, res) => {
+  console.log(req.form)
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
+```
+<br>
+
+`App.jsx`
+
+I removed the fake delay in `App.jsx`'s `onSubmit` function and made it fetch the form data using Fetch API.
+```javascript
+const onSubmit = async (data) => {
+
+  let formData = fetch(
+    "http://localhost:3000/",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    }
+  )
+    
+  let res = await formData.text
+
+  console.log(data, res)
+}
+```
+
+This has a problem. It'll not fetch the data when we hit **Submit**. It'll show the error:
+```
+Access to fetch at 'http://localhost:3000/' from origin
+'http://localhost:5173' has been blocked by CORS policy:
+No 'Access-Control-Allow-Origin' header is present on the requested resource.
+```
+
+To solve this issue, we have to install some npm packages.
+```bash
+npm i cors
+npm i body-parser
+```
+And use both of them in our app in `server.js`.
+```javascript
+app.use(cors())
+app.use(bodyParser.json())
+```
+
+After all this work, the form will work just fine.<br>
+The data will get to the backend without any problem.<br>
+
+This is the proof that the data successfully came to the backend:
+![Backend Image](chapter-119/public/backend_data.png)
+
+Now, we can do anything with the data in the backend.<br>
+Push it to a database, for example.
+
+And... this is how you connect your React app to an Express.js backend.
+
+---
