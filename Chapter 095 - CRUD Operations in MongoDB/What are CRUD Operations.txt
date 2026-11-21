@@ -1,6 +1,6 @@
 CRUD operations in MongoDB are the four basic actions you perform on data in a database.
 
-C	- Create - Add new data to the DB collection
-R	- Read   - Fetch/View the data of the DB collection
-U	- Update - Change the existing data in the DB collection
-D	- Delete - Remove data from the DB collection
+C - Create - Add new data to the DB collection
+R - Read   - Fetch/View the data of the DB collection
+U - Update - Change the existing data in the DB collection
+D - Delete - Remove data from the DB collection
